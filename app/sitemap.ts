@@ -12,7 +12,7 @@ const base = 'https://jaythewizzy.com';
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '', '/about', '/technology', '/studio', '/projects', '/games', '/music', '/books',
-    '/media', '/film-tv', '/contact', '/cv', '/apps', '/wizzy-lux-global-concepts',
+    '/media', '/film-tv', '/contact', '/cv', '/apps', '/investors', '/wizzy-lux-global-concepts',
   ];
   const detailRoutes = [
     ...projects.map((project) => `/projects/${project.slug}`),

@@ -30,7 +30,7 @@ export default function CompanyPage() {
       <section className="section section-soft"><div className="shell">
         <div className="section-heading"><div><div className="eyebrow">THE PORTFOLIO</div><h2>Ventures across the <em>ecosystem.</em></h2></div><p>Each item is independently clickable, with its own project page and current status.</p></div>
         <div className="company-list">{ventures.map(([name, description, href, status]) => <Link className="company-item company-item-link" key={name} href={href}><div className="project-meta"><span className="status status-development">{status}</span></div><h3>{name}</h3><p>{description}</p><span className="text-link">Open venture <ArrowIcon /></span></Link>)}</div>
-        <div className="hero-actions"><Link className="button button-outline" href="/projects">All project details <ArrowIcon /></Link><Link className="button button-quiet" href="/contact">Partnership enquiries <ArrowIcon /></Link></div>
+        <div className="hero-actions"><Link className="button button-outline" href="/projects">All project details <ArrowIcon /></Link><Link className="button button-quiet" href="/contact">Partnership enquiries <ArrowIcon /></Link><Link className="text-link" href="/investors">Investor relations <ArrowIcon /></Link></div>
       </div></section>
     </>
   );

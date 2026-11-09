@@ -69,6 +69,7 @@ export default function HomePage() {
             <Link className="discipline-card" href="/books"><span className="line-icon">B</span><h3>Books & Stories</h3><p><em>The Second Life of Julian Vale</em>, an ongoing multi-book saga. Book One: <em>Play the Game</em>.</p><span className="card-arrow">Explore the story <ArrowIcon /></span></Link>
             <Link className="discipline-card" href="/film-tv"><span className="line-icon">F</span><h3>Film & Television</h3><p>A developing direction for original screen stories, supported by writing, music and production craft.</p><span className="card-arrow">Explore media <ArrowIcon /></span></Link>
             <Link className="discipline-card" href="/studio"><span className="line-icon">S</span><h3>Creative Studio</h3><p>Product thinking, creative direction and practical execution for selected client work.</p><span className="card-arrow">Explore the studio <ArrowIcon /></span></Link>
+            <Link className="discipline-card" href="/apps"><span className="line-icon">A</span><h3>Apps & Digital Products</h3><p>Web and mobile applications, including LUXEN across Android, iOS and web.</p><span className="card-arrow">Explore apps <ArrowIcon /></span></Link>
           </div>
         </div>
       </section>
@@ -80,7 +81,7 @@ export default function HomePage() {
               <div className="eyebrow">THE PARENT COMPANY</div>
               <h2>WizzyLux Global Concepts</h2>
               <p>The wider company behind the independent products, ventures and creative work. Its ecosystem spans software platforms, games, digital services, a clothing brand, music production and distribution, and developing media projects.</p>
-              <div className="hero-actions"><Link className="button button-outline" href="/wizzy-lux-global-concepts">Explore the company <ArrowIcon /></Link><Link className="text-link" href="/projects">View its ventures <ArrowIcon /></Link></div>
+              <div className="hero-actions"><Link className="button button-outline" href="/wizzy-lux-global-concepts">Explore the company <ArrowIcon /></Link><Link className="text-link" href="/projects">View its ventures <ArrowIcon /></Link><Link className="text-link" href="/investors">Investor relations <ArrowIcon /></Link></div>
             </div>
             <div className="brand-company-mark">WL</div>
           </div>

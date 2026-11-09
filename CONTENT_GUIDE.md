@@ -55,3 +55,8 @@ Edit the `ventures` array in `app/wizzy-lux-global-concepts/page.tsx`. The paren
 - Shared design system: `app/globals.css`
 
 Keep project-specific copy in data files whenever possible so a single page can be updated without changing the shared shell.
+
+## Apps and investors
+- Maintain customer-facing application catalogue entries in `data/apps.ts`. Each app creates `/apps/[slug]/` automatically.
+- Apps are also linked from the homepage ecosystem and the Projects overview. Keep Apps distinct from engineering case studies and Games.
+- The Investors page lives at `app/investors/page.tsx` (`/investors`). Keep statements factual: do not add unaudited revenue, user counts, valuations, investment terms or projected returns. Investment discussions are venture-specific.

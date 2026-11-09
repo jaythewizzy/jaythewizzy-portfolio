@@ -12,6 +12,7 @@ const navigation = [
   { label: 'Apps', href: '/apps' },
   { label: 'Studio', href: '/studio' },
   { label: 'Projects', href: '/projects' },
+  { label: 'Investors', href: '/investors' },
   { label: 'Games', href: '/games' },
   { label: 'Media', href: '/media' },
   { label: 'About', href: '/about' },
