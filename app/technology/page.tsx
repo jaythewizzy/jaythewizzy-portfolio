@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon, DownloadIcon } from '@/components/icons';
 import { createPageMetadata } from '@/lib/seo';
+import styles from './technology.module.css';
 
 export const metadata = createPageMetadata({
   title: 'Software & AI Engineering',
@@ -29,7 +30,7 @@ export default function TechnologyPage() {
         <div className="shell">
           <div className="section-heading"><div><div className="eyebrow">TECHNICAL TOOLKIT</div><h2>A broad stack. <em>Practical delivery.</em></h2></div><p>Technologies are tools. The important part is understanding the system and choosing what fits the product.</p></div>
           <div className="skill-grid">
-            {skills.map((group) => <article className="skill-card" key={group.title}><h3>{group.title}</h3><div className="stack-row">{group.items.map((item) => <span className="tag" key={item}>{item}</span>)}</div></article>)}
+            {skills.map((group) => <article className="skill-card" key={group.title}><h3>{group.title}</h3><div className={`stack-row ${styles.stackRow}`}>{group.items.map((item) => <span className="tag" key={item}>{item}</span>)}</div></article>)}
           </div>
         </div>
       </section>
