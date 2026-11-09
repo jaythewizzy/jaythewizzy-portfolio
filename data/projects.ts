@@ -64,13 +64,13 @@ export const projects: Project[] = [
   },
   {
     slug: 'wizzylux',
-    name: 'Wizzylux',
+    name: 'WizzyLux',
     category: 'Clothing & lifestyle brand',
     status: 'Live brand',
     statusTone: 'brand',
     summary: 'A clothing and lifestyle brand built around a clean identity and the promise “Only the best. Always.”',
     description: [
-      'Wizzylux is the clothing and lifestyle brand in the wider portfolio. It has its own visual identity, storefront and audience, separate from the software products and the JaytheWizzy personal brand.',
+      'WizzyLux is the clothing and lifestyle brand in the wider portfolio. It has its own visual identity, storefront and audience, separate from the software products and the JaytheWizzy personal brand.',
       'The brand is intentionally maintained as its own business identity rather than being folded into the personal portfolio.',
     ],
     stack: ['Shopify', 'E-commerce', 'Brand development'],

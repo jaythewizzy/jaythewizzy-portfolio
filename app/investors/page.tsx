@@ -48,7 +48,7 @@ export default function InvestorsPage() {
   return (
     <>
       <PageIntro
-        eyebrow="INVESTOR RELATIONS · WIZZY LUX GLOBAL CONCEPTS"
+        eyebrow="INVESTOR RELATIONS · WIZZYLUX GLOBAL CONCEPTS"
         title={<>Backing ideas.<br /><em>Building lasting ventures.</em></>}
         description="WizzyLux Global Concepts is developing a founder-led portfolio across software, AI, applications, games, music, publishing and future screen production. This page introduces the areas of activity and opens a channel for aligned investor and strategic-partner conversations."
       />

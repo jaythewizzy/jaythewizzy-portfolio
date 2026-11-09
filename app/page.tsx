@@ -43,7 +43,7 @@ export default function HomePage() {
             <div className="art-orbit orbit-a" />
             <div className="art-orbit orbit-b" />
             <div className="art-monogram">JW</div>
-            <div className="art-caption"><span>WIZZY LUX GLOBAL CONCEPTS</span><b>MEDIA · TECHNOLOGY · OWNERSHIP</b></div>
+            <div className="art-caption"><span>WIZZYLUX GLOBAL CONCEPTS</span><b>MEDIA · TECHNOLOGY · OWNERSHIP</b></div>
             <div className="art-chip chip-one"><span className="chip-dot" /> SOFTWARE & AI</div>
             <div className="art-chip chip-two"><span className="chip-dot" /> DIGITAL PRODUCTS</div>
             <div className="art-chip chip-three"><span className="chip-dot" /> GAMES & MEDIA</div>

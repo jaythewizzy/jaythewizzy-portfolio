@@ -16,7 +16,7 @@ const ventures = [
   ['LUXEN', 'Movie and television discovery across web and mobile.', '/projects/luxen', 'Live product'],
   ['GrowthOS', 'Digital services, wallet, marketplace and operating platform.', '/projects/growthos', 'Live platform'],
   ['The Foundry', 'Multidisciplinary digital studio for product, UI/UX, AI and interactive work.', '/projects/the-foundry', 'In development'],
-  ['Wizzylux', 'Clothing and lifestyle brand with its own storefront and identity.', '/projects/wizzylux', 'Live brand'],
+  ['WizzyLux', 'Clothing and lifestyle brand with its own storefront and identity.', '/projects/wizzylux', 'Live brand'],
   ['Coinwell', 'Casual progression game published by GrowthOS.', '/games/coinwell', 'Closed testing'],
   ['LifeLeague', 'Multi-generation life simulation with a server-side game economy.', '/games/lifeleague', 'Release candidate'],
 ];
