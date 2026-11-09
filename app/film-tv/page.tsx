@@ -6,6 +6,7 @@ import { ArrowIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'Film & Television Development',
   description: 'The developing film and television direction within JaytheWizzy’s wider media and technology vision.',
+  alternates: { canonical: '/film-tv/' },
 };
 
 export default function FilmTvPage() {

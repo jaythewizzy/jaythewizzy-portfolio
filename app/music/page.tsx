@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Music by JaytheWizzy',
   description:
     'Explore The Life We Made, Beyond the Horizon and JaytheWizzy’s released Pop/Soul singles across Afrobeats, Pop/Soul and cinematic orchestral music.',
+  alternates: { canonical: '/music/' },
 };
 
 export default function MusicPage() {

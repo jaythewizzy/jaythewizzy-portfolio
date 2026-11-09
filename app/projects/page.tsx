@@ -10,6 +10,7 @@ import { apps } from '@/data/apps';
 export const metadata: Metadata = {
   title: 'Projects & Ventures',
   description: 'Software products, platforms, independent brands, trading systems and games developed by Stephen Omojola — JaytheWizzy.',
+  alternates: { canonical: '/projects/' },
 };
 
 export default function ProjectsPage() {

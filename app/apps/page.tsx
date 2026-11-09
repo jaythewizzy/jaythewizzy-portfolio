@@ -8,6 +8,7 @@ import { apps } from '@/data/apps';
 export const metadata: Metadata = {
   title: 'Apps',
   description: 'Mobile and web applications created and shipped by Stephen Omojola — JaytheWizzy.',
+  alternates: { canonical: '/apps/' },
 };
 
 export default function AppsPage() {

@@ -8,6 +8,7 @@ import { books } from '@/data/books';
 export const metadata: Metadata = {
   title: 'Books & Original Stories',
   description: 'Original fiction in development by JaytheWizzy, including The Second Life of Julian Vale, a planned four-book saga. Book One, Play the Game, is in progress.',
+  alternates: { canonical: '/books/' },
 };
 
 export default function BooksPage() {

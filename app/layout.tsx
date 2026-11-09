@@ -5,6 +5,7 @@ import { SiteFooter } from '@/components/site-footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jaythewizzy.com'),
+  alternates: { canonical: '/' },
   title: {
     default: 'Stephen Omojola | Software & AI Engineer — JaytheWizzy',
     template: '%s | JaytheWizzy',

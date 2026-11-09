@@ -8,6 +8,7 @@ import { SocialLinks } from '@/components/social-links';
 export const metadata: Metadata = {
   title: 'Contact & Work Enquiries',
   description: 'Contact Stephen Omojola — JaytheWizzy for remote Software & AI Engineering roles, freelance projects, commissioned development and partnerships.',
+  alternates: { canonical: '/contact/' },
 };
 
 export default function ContactPage() {

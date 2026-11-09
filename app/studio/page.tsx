@@ -6,6 +6,7 @@ import { ArrowIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'JaytheWizzy Creative Studio',
   description: 'A practical creative and product development practice for software, AI, digital products, games, music and original stories.',
+  alternates: { canonical: '/studio/' },
 };
 
 const services = [

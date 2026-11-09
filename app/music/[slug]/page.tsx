@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const release = getMusicRelease(slug);
   return release
-    ? { title: `${release.title} · JaytheWizzy`, description: release.description }
+    ? { title: `${release.title} · JaytheWizzy`, description: release.description, alternates: { canonical: `/music/${slug}/` } }
     : { title: 'Release not found' };
 }
 

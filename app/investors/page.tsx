@@ -6,6 +6,7 @@ import { ArrowIcon, MailIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'Investors & Strategic Partners',
   description: 'Investor relations and strategic partnership enquiries for WizzyLux Global Concepts and its software, applications, games and media ventures.',
+  alternates: { canonical: '/investors/' },
 };
 
 const focusAreas = [

@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const app = getApp(slug);
-  return app ? { title: app.name, description: app.summary } : { title: 'App not found' };
+  return app ? { title: app.name, description: app.summary, alternates: { canonical: `/apps/${slug}/` } } : { title: 'App not found' };
 }
 
 export default async function AppDetailPage({ params }: Props) {

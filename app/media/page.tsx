@@ -6,6 +6,7 @@ import { ArrowIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'Media, Music, Books & Film',
   description: 'Released music, original fiction and developing film and television projects within the JaytheWizzy creative ecosystem.',
+  alternates: { canonical: '/media/' },
 };
 
 export default function MediaPage() {

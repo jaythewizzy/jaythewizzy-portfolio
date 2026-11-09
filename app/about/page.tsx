@@ -6,6 +6,7 @@ import { ArrowIcon, DownloadIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'About Stephen Omojola',
   description: 'The background, approach and work of Stephen Omojola, known as JaytheWizzy — Software & AI Engineer and founder of WizzyLux Global Concepts.',
+  alternates: { canonical: '/about/' },
 };
 
 export default function AboutPage() {

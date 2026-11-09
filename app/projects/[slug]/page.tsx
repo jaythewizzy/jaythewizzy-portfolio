@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return { title: 'Project not found' };
-  return { title: project.name, description: project.summary };
+  return { title: project.name, description: project.summary, alternates: { canonical: `/projects/${slug}/` } };
 }
 
 export default async function ProjectDetailPage({ params }: Props) {

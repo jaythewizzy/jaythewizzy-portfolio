@@ -8,6 +8,7 @@ import { games } from '@/data/games';
 export const metadata: Metadata = {
   title: 'Games & Interactive Projects',
   description: 'Games and interactive systems by JaytheWizzy, including Coinwell and LifeLeague.',
+  alternates: { canonical: '/games/' },
 };
 
 export default function GamesPage() {

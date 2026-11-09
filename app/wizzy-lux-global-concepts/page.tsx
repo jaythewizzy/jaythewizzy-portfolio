@@ -6,6 +6,7 @@ import { ArrowIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'WizzyLux Global Concepts',
   description: 'The parent company and wider ecosystem behind independent software, games, brands, music and creative ventures founded by Stephen Omojola.',
+  alternates: { canonical: '/wizzy-lux-global-concepts/' },
 };
 
 const ventures = [

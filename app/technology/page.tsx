@@ -6,6 +6,7 @@ import { ArrowIcon, DownloadIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'Software & AI Engineering',
   description: 'Full-stack web and mobile development, backend systems, AI integrations, payments, cloud infrastructure and production delivery by Stephen Omojola.',
+  alternates: { canonical: '/technology/' },
 };
 
 const skills = [

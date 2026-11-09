@@ -7,6 +7,7 @@ import { site } from '@/data/site';
 export const metadata: Metadata = {
   title: 'CV & Résumé',
   description: 'Download the CV of Stephen Omojola — Software and AI Engineer.',
+  alternates: { canonical: '/cv/' },
 };
 
 export default function CvPage() {
