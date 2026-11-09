@@ -2,6 +2,10 @@
 
 The site layout is shared. Most content updates should happen in the data files rather than editing page layouts.
 
+## Add or update an app
+
+Edit `data/apps.ts`. The `/apps/` catalogue and `/apps/[slug]/` detail routes are generated from this file. Each entry records its platforms, live status, product description, highlights, stack and official website. Add a new entry with a unique `slug` to create its own page and sitemap entry. Keep games in `data/games.ts`; this Apps catalogue is for installable/web applications such as LUXEN.
+
 ## Add or update a software project
 
 Edit `data/projects.ts`.

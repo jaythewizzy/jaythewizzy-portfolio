@@ -3,6 +3,7 @@ import { projects } from '@/data/projects';
 import { games } from '@/data/games';
 import { books } from '@/data/books';
 import { musicReleases } from '@/data/music';
+import { apps } from '@/data/apps';
 
 export const dynamic = 'force-static';
 
@@ -11,13 +12,14 @@ const base = 'https://jaythewizzy.com';
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '', '/about', '/technology', '/studio', '/projects', '/games', '/music', '/books',
-    '/media', '/film-tv', '/contact', '/cv', '/wizzy-lux-global-concepts',
+    '/media', '/film-tv', '/contact', '/cv', '/apps', '/wizzy-lux-global-concepts',
   ];
   const detailRoutes = [
     ...projects.map((project) => `/projects/${project.slug}`),
     ...games.map((game) => `/games/${game.slug}`),
     ...books.map((book) => `/books/${book.slug}`),
     ...musicReleases.map((release) => `/music/${release.slug}`),
+    ...apps.map((app) => `/apps/${app.slug}`),
   ];
 
   return [...staticRoutes, ...detailRoutes].map((route) => ({

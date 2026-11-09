@@ -35,6 +35,7 @@ The build statically exports the site to `out/`. Vercel detects Next.js from `pa
 - `/` — Home
 - `/about/` — Stephen's background and experience
 - `/technology/` — software and AI engineering stack
+- `/apps/` and `/apps/[slug]/` — installable and web applications, each with its own product page
 - `/studio/` — services and client work
 - `/projects/` — all software, platform and brand projects
 - `/projects/[slug]/` — an individual project detail page

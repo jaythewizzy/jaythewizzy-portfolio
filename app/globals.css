@@ -217,3 +217,8 @@
 @media(max-width:900px){.book-saga-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.book-detail-stack{gap:32px}.book-two-column{grid-template-columns:1fr}.book-enquiry-panel{align-items:flex-start;flex-direction:column}.book-saga-card h3{min-height:0}}
 @media(max-width:420px){.book-status-banner{padding:18px}.book-status-mark{width:58px;height:58px;font-size:8px}.book-saga-grid{grid-template-columns:1fr}.book-saga-card{padding:16px}}
+
+/* Hero role tags: clean bullet-separated labels with no leading decorative dash. */
+.hero-roles{display:flex;align-items:center;flex-wrap:wrap;gap:4px 0}
+.hero-roles span{white-space:nowrap}
+.hero-roles i{padding-inline:10px}

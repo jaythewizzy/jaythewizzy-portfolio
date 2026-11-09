@@ -16,7 +16,7 @@ export default function HomePage() {
         <div className="hero-glow hero-glow-two" />
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <div className="eyebrow"><span className="eyebrow-line" /> SOFTWARE & AI ENGINEER <i>•</i> CREATIVE BUILDER <i>•</i> FOUNDER</div>
+            <div className="eyebrow hero-roles"><span>SOFTWARE &amp; AI ENGINEER</span><i aria-hidden="true">•</i><span>CREATIVE BUILDER</span><i aria-hidden="true">•</i><span>FOUNDER</span></div>
             <h1>Software & AI <em>Engineer.</em><br />Building what&apos;s next.</h1>
             <p className="hero-lede">I&apos;m Stephen Omojola, known as JaytheWizzy. I design and ship production-ready software, mobile applications and AI-powered systems — from architecture and data to payments, deployment and release.</p>
             <p className="hero-support">Through WizzyLux Global Concepts, I&apos;m building an independent media and technology ecosystem across software, games, music, books and future screen production. I also work with clients and teams on remote roles, freelance engineering and selected collaborations.</p>
@@ -39,7 +39,7 @@ export default function HomePage() {
         </div>
         <div className="shell discipline-strip">
           <Link href="/technology"><span className="discipline-icon">01</span><span><b>Software & AI</b><small>Engineering end to end</small></span><ArrowIcon /></Link>
-          <Link href="/projects"><span className="discipline-icon">02</span><span><b>Digital Products</b><small>Web · mobile · platforms</small></span><ArrowIcon /></Link>
+          <Link href="/apps"><span className="discipline-icon">02</span><span><b>Apps</b><small>Android · iOS · web</small></span><ArrowIcon /></Link>
           <Link href="/games"><span className="discipline-icon">03</span><span><b>Games</b><small>Systems · progression · play</small></span><ArrowIcon /></Link>
           <Link href="/media"><span className="discipline-icon">04</span><span><b>Music & Stories</b><small>Sound · books · screen</small></span><ArrowIcon /></Link>
         </div>
