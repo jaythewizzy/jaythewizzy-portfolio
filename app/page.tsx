@@ -6,6 +6,7 @@ import { projects } from '@/data/projects';
 import { createPageMetadata } from '@/lib/seo';
 import { JsonLd } from '@/components/json-ld';
 import { websiteStructuredData } from '@/lib/structured-data';
+import styles from './homepage-partnership-callout.module.css';
 
 export const metadata = createPageMetadata({
   title: 'Stephen Omojola | Software & AI Engineer',
@@ -93,7 +94,12 @@ export default function HomePage() {
               <div className="eyebrow">THE PARENT COMPANY</div>
               <h2>WizzyLux Global Concepts</h2>
               <p>The wider company behind the independent products, ventures and creative work. Its ecosystem spans software platforms, games, digital services, a clothing brand, music production and distribution, and developing media projects.</p>
-              <div className="hero-actions"><Link className="button button-outline" href="/wizzy-lux-global-concepts">Explore the company <ArrowIcon /></Link><Link className="text-link" href="/projects">View its ventures <ArrowIcon /></Link><Link className="text-link" href="/investors">Investor relations <ArrowIcon /></Link></div>
+              <div className="hero-actions"><Link className="button button-outline" href="/wizzy-lux-global-concepts">Explore the company <ArrowIcon /></Link><Link className="text-link" href="/projects">View its ventures <ArrowIcon /></Link></div>
+              <div className={styles.opportunity}>
+                <div className={`eyebrow ${styles.eyebrow}`}>INVESTORS &amp; STRATEGIC PARTNERS</div>
+                <p className={styles.copy}>Interested in the wider WizzyLux ecosystem? We welcome conversations with investors and strategic partners who see potential in the ventures we&apos;re building.</p>
+                <Link className={`text-link ${styles.link}`} href="/investors">Explore opportunities <ArrowIcon /></Link>
+              </div>
             </div>
             <div className="brand-company-mark">WL</div>
           </div>
