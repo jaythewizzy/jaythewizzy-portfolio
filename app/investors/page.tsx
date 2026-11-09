@@ -130,9 +130,12 @@ export default function InvestorsPage() {
           <div>
             <div className="eyebrow">INVESTORS & STRATEGIC PARTNERS</div>
             <h2>Interested in a specific <em>venture?</em></h2>
-            <p>Introduce yourself, the opportunity you see and the kind of involvement you have in mind. Enquiries are reviewed individually.</p>
+            <p>Introduce yourself, the venture or portfolio area that interests you, and the kind of involvement you have in mind. You can email directly or use the Contact page for WhatsApp, LinkedIn and Telegram options. I review enquiries personally and, where there is potential alignment, follow up directly to arrange an initial conversation. Further information can be shared as appropriate after that first discussion.</p>
           </div>
-          <a className="button button-primary" href="mailto:jaythewizzy@gmail.com?subject=Investor%20and%20Strategic%20Partnership%20Enquiry">Email WizzyLux <ArrowIcon /></a>
+          <div className="hero-actions">
+            <a className="button button-primary" href="mailto:jaythewizzy@gmail.com?subject=Investor%20and%20Strategic%20Partnership%20Enquiry">Email WizzyLux <MailIcon /></a>
+            <Link className="button button-quiet" href="/contact/">Other contact options <ArrowIcon /></Link>
+          </div>
         </div>
       </section>
     </>

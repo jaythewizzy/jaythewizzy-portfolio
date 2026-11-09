@@ -35,10 +35,37 @@ export default function ContactPage() {
           <h2>Choose your preferred <em>WhatsApp line.</em></h2>
           <p>Each link opens WhatsApp with a prepared greeting. Nothing is sent until you choose to send it.</p>
           {site.whatsapp.map((line, index) => <a className="whatsapp-option" key={line.href} href={`${line.href}?text=Hello%20JaytheWizzy%2C%20I%27d%20like%20to%20discuss%20a%20professional%20opportunity%20or%20project.`} target="_blank" rel="noreferrer noopener"><span className="contact-icon"><WhatsAppIcon /></span><span><small>WHATSAPP · LINE {index + 1}</small><b>{line.display}</b><em>{line.label} · Open conversation</em></span><ArrowIcon /></a>)}
-          <div className="contact-note">For remote roles, freelance builds and commissioned software work, please include a short description of the opportunity, expected scope and timeline.</div>
+          <div className="contact-note">For a project enquiry, include a short description of what you want to build, the main features or platforms, your target timeline and an estimated budget range if you have one. If the budget is still undecided, that is fine too.</div>
         </div>
       </div></section>
-      <section className="section section-soft"><div className="shell"><div className="brand-company-panel"><div><div className="eyebrow">BUSINESS & PARTNERSHIP ENQUIRIES</div><h2>WizzyLux Global Concepts</h2><p>For company-level partnerships, media development and opportunities involving the wider portfolio.</p><div className="hero-actions"><Link className="button button-outline" href="/wizzy-lux-global-concepts">Explore the company <ArrowIcon /></Link></div></div><div className="brand-company-mark">WL</div></div></div></section>
+      <section className="section section-soft">
+        <div className="shell detail-grid">
+          <article className="detail-panel">
+            <div className="eyebrow">PROJECT & BUSINESS ENQUIRIES</div>
+            <h2>Scope first.<br /><em>Then a tailored proposal.</em></h2>
+            <div className="detail-copy">
+              <p>Project pricing is not one-size-fits-all, so I do not publish fixed rates on this page. A quote is prepared after understanding the goals, features, platforms, integrations, complexity, delivery requirements and timeline.</p>
+              <p>To help me assess an enquiry, describe what you want to build, who it is for, the essential features and when you hope to launch. Include a budget range if you already have one; it is completely fine to say that you are still working it out.</p>
+            </div>
+            <p className="investor-note">The next step is a direct conversation to clarify the scope. Any proposal will set out the agreed deliverables, pricing, milestones and timeline before work is committed.</p>
+          </article>
+          <article className="detail-panel">
+            <div className="eyebrow">INVESTMENT & STRATEGIC PARTNERSHIPS</div>
+            <h2>A different <em>conversation.</em></h2>
+            <div className="detail-copy">
+              <p>Investment interest, distribution opportunities and strategic partnerships involving the wider WizzyLux Global Concepts ecosystem have a dedicated page and enquiry process.</p>
+              <p>You can review the portfolio areas, see what information is useful for an initial discussion and contact me directly. These enquiries are considered individually; there are no published valuations, investment terms or promised returns.</p>
+            </div>
+            <div className="hero-actions">
+              <Link className="button button-primary" href="/investors/">Investors & strategic partners <ArrowIcon /></Link>
+              <Link className="button button-quiet" href="/wizzy-lux-global-concepts">Explore WizzyLux <ArrowIcon /></Link>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section className="section">
+        <div className="shell"><div className="brand-company-panel"><div><div className="eyebrow">THE WIDER ECOSYSTEM</div><h2>WizzyLux Global Concepts</h2><p>Explore the parent company behind the technology, products and creative ventures.</p><div className="hero-actions"><Link className="button button-outline" href="/wizzy-lux-global-concepts">Explore the company <ArrowIcon /></Link></div></div><div className="brand-company-mark">WL</div></div></div>
+      </section>
     </>
   );
 }
