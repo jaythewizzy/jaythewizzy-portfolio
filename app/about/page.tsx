@@ -7,7 +7,7 @@ import { personProfileStructuredData } from '@/lib/structured-data';
 
 export const metadata = createPageMetadata({
   title: 'About Stephen Omojola',
-  description: 'Meet Stephen Omojola (JaytheWizzy), a Software & AI Engineer, founder, game developer, music artist and fiction writer behind WizzyLux Global Concepts.',
+  description: 'Stephen Omojola (JaytheWizzy), Software & AI Engineer and founder of WizzyLux Global Concepts, building across technology, media and future film projects.',
   path: '/about/',
   image: '/og/about.jpg',
 });
@@ -28,6 +28,7 @@ export default function AboutPage() {
             <p>Alongside client work, I develop independent products through <Link href="/wizzy-lux-global-concepts">WizzyLux Global Concepts</Link>. That work spans software platforms, games, music production and distribution, and original writing.</p>
             <p>Selected work includes <Link href="/apps/luxen">LUXEN</Link>, a movie and television discovery product for web and mobile; <Link href="/projects/growthos">GrowthOS</Link>, a digital services platform; and the game projects <Link href="/games/coinwell">Coinwell</Link> and <Link href="/games/lifeleague">LifeLeague</Link>. The wider portfolio also includes <Link href="/projects/the-foundry">The Foundry</Link>, a developing digital studio; <Link href="/projects/wizzylux">WizzyLux</Link>, a clothing and lifestyle brand; a <Link href="/projects/eurusd-trading-system">Python-based EURUSD research and trading system</Link>; and an <Link href="/projects/appointment-booking-platform">appointment-booking platform prototype</Link>. <Link href="/projects">Explore the full project portfolio</Link>.</p>
             <p>My creative catalogue includes <Link href="/music">two released EPs and four standalone singles</Link>, alongside <Link href="/books/the-second-life-of-julian-vale">The Second Life of Julian Vale</Link>, a planned four-book fiction saga with Book One in progress. <Link href="/media">Explore the music, books and screen work</Link>.</p>
+            <p>My long-term ambition is to build a media and technology empire through WizzyLux Global Concepts — not a collection of disconnected projects, but an interconnected ecosystem. Technology, AI, apps and games are one side of that vision; music, publishing and original film are another. I plan to develop original stories for the screen and, over time, build the creative and production capabilities to bring them to life. Film is a future direction I’m actively working toward as the wider ecosystem grows.</p>
             <p>I’m open to remote roles, freelance engineering, commissioned product development and thoughtful partnerships.</p>
             <div className="hero-actions"><Link className="button button-primary" href="/contact">Work with me <ArrowIcon /></Link><Link className="button button-quiet" href="/cv">Download CV <DownloadIcon /></Link></div>
           </div>
