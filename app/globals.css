@@ -237,3 +237,108 @@
   .mobile-nav-actions a:after{display:none}
   .mobile-nav-actions a svg{width:13px;height:13px}
 }
+
+/* Typography and responsive refinement: prioritize comfortable reading at every size. */
+body{font-size:16px;line-height:1.75}
+.hero-lede,.intro-lede,.section-heading>p,.discipline-card p,.service-card p,.project-card p,.vision-inner p,.contact-cta p,.about-copy p,.principle-grid p,.process-grid p,.project-feature-copy p,.game-copy p,.media-row p,.contact-intro-card>p,.whatsapp-panel>p,.detail-panel p,.detail-copy,.feature-list li,.skill-card p,.timeline-item p,.availability-panel p,.brand-company-panel p,.company-item p,.home-proof-grid p,.release-panel>p,.music-listen-copy p,.music-release-card>p,.book-enquiry-panel p,.footer-top>p,.investor-note,.hero-support{font-size:clamp(14px,calc(13.5px + .2vw),16px);line-height:1.78;font-weight:450}
+.section-heading>p,.vision-inner p,.project-card p,.contact-cta p,.discipline-card p,.service-card p,.principle-grid p,.process-grid p,.media-row p,.contact-intro-card>p,.whatsapp-panel>p,.detail-panel p,.skill-card p,.timeline-item p,.availability-panel p,.brand-company-panel p,.company-item p,.home-proof-grid p,.release-panel>p,.music-listen-copy p,.music-release-card>p,.book-enquiry-panel p,.footer-top>p,.investor-note{max-width:72ch}
+.main-nav a{font-size:13px}
+.button{font-size:13px}
+.button-small{font-size:12px}
+.eyebrow{font-size:11px;letter-spacing:.19em}
+.brand-name{font-size:14px}
+.brand-descriptor{font-size:9px;letter-spacing:.3em}
+.discipline-strip b{font-size:12px}
+.discipline-strip small{font-size:11px}
+.discipline-card h3,.service-card h3,.principle-grid h3,.process-grid h3,.detail-panel h3,.skill-card h3,.timeline-item h3,.company-item h3,.book-saga-card h3{font-size:15px;line-height:1.42}
+.discipline-card p,.service-card p{font-size:14px}
+.project-card p{font-size:14px}
+.project-meta,.breadcrumb,.contact-person small,.contact-detail small,.whatsapp-option small,.timeline-item .timeline-meta,.detail-fact small,.release-track span:last-child,.social-label,.footer-links span,.footer-bottom,.status,.book-saga-top,.book-saga-stage,.music-track-type,.music-track-number,.music-single-main small{font-size:11px}
+.text-link,.contact-detail>a,.footer-links a,.footer-contact,.music-platform-popover a,.contact-note,.music-single-note,.music-detail-panel .music-detail-footnote,.muted-note{font-size:12px}
+.contact-detail b,.contact-person b,.cv-summary-grid strong,.cv-summary-grid span,.home-proof-grid b,.home-proof-grid p,.detail-fact strong,.release-track,.music-track-title,.music-single-main strong{font-size:13px}
+.contact-icon{font-size:12px}
+.contact-intro-card>p,.whatsapp-panel>p,.about-copy p,.timeline-item p,.detail-copy,.detail-panel p,.availability-panel p{font-size:15px}
+.platform-links a,.music-platform-primary>a,.music-platform-more>summary{font-size:12px}
+.music-track-note{font-size:10.5px;line-height:1.6}
+.music-track-title{font-size:12.5px}
+.music-track-number,.music-track-type{font-size:10.5px}
+.art-caption span{font-size:10px}
+.art-caption b{font-size:11px}
+.art-chip{font-size:9px}
+.portrait-caption span{font-size:10px}
+.portrait-caption b{font-size:14px}
+.about-monogram-panel small{font-size:10px}
+.about-monogram-panel b{font-size:10px}
+.footer-links span{font-size:10px;letter-spacing:.12em}
+.footer-links a{font-size:12px}
+.footer-bottom{font-size:11px}
+.mobile-nav-actions a{font-size:12px}
+
+/* Tablet and compact-laptop header: avoid squeezing ten links into tiny type. */
+@media (min-width:761px) and (max-width:1100px){
+  .header-inner{position:relative;min-height:76px}
+  .main-nav{position:absolute;left:0;right:0;top:75px;display:none;padding:14px 22px 20px;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:var(--shadow);grid-template-columns:repeat(3,minmax(0,1fr));gap:0 20px;z-index:60}
+  .main-nav.is-open{display:grid}
+  .main-nav a{padding:14px 4px;border-bottom:1px solid var(--line);font-size:13px}
+  .main-nav a[aria-current=page]:after{bottom:5px;right:auto;width:28px}
+  .header-cv,.header-cta{display:none!important}
+  .menu-toggle{display:grid}
+  .header-tools{gap:12px}
+  .mobile-nav-actions{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding-top:16px}
+  .mobile-nav-actions a{display:flex;align-items:center;justify-content:center;gap:7px;min-height:46px;padding:0 12px;border:1px solid var(--line-strong);border-radius:999px;font-size:13px;font-weight:800;white-space:nowrap}
+  .mobile-nav-actions .mobile-cv-link{display:flex;background:var(--surface);color:var(--text)}
+  .mobile-nav-actions .mobile-contact-link{background:var(--gold);border-color:var(--gold);color:#19150e}
+  .mobile-nav-actions a:after{display:none}
+  .mobile-nav-actions a svg{width:14px;height:14px}
+}
+
+/* Tablet portrait: use balanced two-column grids instead of compressed desktop cards. */
+@media (min-width:761px) and (max-width:900px){
+  .shell{width:calc(100% - 52px)}
+  .home-hero{padding:54px 0 28px;min-height:auto}
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(275px,.88fr);gap:26px;min-height:350px}
+  .hero-copy h1{font-size:clamp(38px,5vw,48px)}
+  .hero-lede{font-size:15px}
+  .hero-art{height:290px}
+  .discipline-strip{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:38px}
+  .discipline-strip>a{padding:16px 15px;border-bottom:1px solid var(--line)}
+  .discipline-strip>a:nth-child(2){border-right:0}
+  .discipline-strip>a:nth-child(3),.discipline-strip>a:nth-child(4){border-bottom:0}
+  .discipline-grid,.project-grid,.service-grid,.process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .section{padding:78px 0}
+  .footer-links{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* Large desktop and ultrawide: use more canvas without letting text lines sprawl. */
+@media (min-width:1440px){
+  .shell{width:min(1320px,calc(100% - 96px))}
+  .section{padding:104px 0}
+  .home-hero{min-height:670px;padding-top:100px}
+  .hero-grid{gap:76px}
+  .hero-art{height:390px}
+}
+@media (min-width:1920px){
+  .shell{width:min(1440px,calc(100% - 160px))}
+  .section{padding:112px 0}
+  .home-hero{min-height:710px}
+  .hero-grid{gap:90px}
+}
+
+/* Keep the mobile layouts, but prevent small text from shrinking back down. */
+@media (max-width:760px){
+  body{font-size:16px}
+  .hero-lede,.intro-lede,.section-heading>p,.discipline-card p,.service-card p,.project-card p,.vision-inner p,.contact-cta p,.about-copy p,.principle-grid p,.process-grid p,.project-feature-copy p,.game-copy p,.media-row p,.contact-intro-card>p,.whatsapp-panel>p,.detail-panel p,.detail-copy,.feature-list li,.skill-card p,.timeline-item p,.availability-panel p,.brand-company-panel p,.company-item p,.home-proof-grid p,.release-panel>p,.music-listen-copy p,.music-release-card>p,.book-enquiry-panel p,.footer-top>p,.investor-note,.hero-support{font-size:14px;line-height:1.75}
+  .main-nav a{font-size:13px}
+  .discipline-card h3,.service-card h3{font-size:14px}
+  .discipline-card p,.service-card p{font-size:13.5px}
+  .footer-links a{font-size:12px}
+  .mobile-nav-actions a{font-size:12px}
+  .music-platform-primary>a,.music-platform-more>summary{font-size:11px}
+  .music-track-title{font-size:12px}
+  .music-track-note{font-size:10px}
+}
+@media (max-width:420px){
+  .hero-lede,.intro-lede,.about-copy p,.detail-copy,.timeline-item p,.contact-intro-card>p,.whatsapp-panel>p{font-size:14px}
+  .music-platform-primary>a{font-size:10.5px}
+}
+
