@@ -12,6 +12,7 @@ export const site = {
     { label: 'Nigeria line', display: '+234 813 084 7252', href: 'https://wa.me/2348130847252' },
   ],
   socials: [
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jaythewizzy/', icon: 'linkedin' },
     { name: 'GitHub', href: 'https://github.com/jaythewizzy', icon: 'github' },
     { name: 'YouTube', href: 'https://youtube.com/@jaythewizzy', icon: 'youtube' },
     { name: 'Instagram', href: 'https://instagram.com/jaythewizzy', icon: 'instagram' },

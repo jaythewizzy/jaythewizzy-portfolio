@@ -29,11 +29,13 @@ export function WhatsAppIcon(props: SVGProps<SVGSVGElement>) {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d="M20.4 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-5A8.2 8.2 0 1 1 20.4 11.7Z"/><path d="M8.4 8.1c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7.4.7 1.2 1.5 2 2 .3.2.5.2.7 0l.8-.9c.2-.2.4-.2.6-.1l1.8.8c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.2-2.5-1-3.8-2.1-1.3-1.2-2.2-2.7-2.4-3.8-.2-.8.1-1.5.7-2.1Z"/></svg>;
 }
 
-export type SocialIconName = 'github' | 'youtube' | 'instagram' | 'x' | 'tiktok' | 'spotify';
+export type SocialIconName = 'linkedin' | 'github' | 'youtube' | 'instagram' | 'x' | 'tiktok' | 'spotify';
 
 export function SocialIcon({ name, ...props }: SVGProps<SVGSVGElement> & { name: SocialIconName }) {
   const common = { viewBox: '0 0 24 24', fill: 'none' as const, stroke: 'currentColor', strokeWidth: 1.75, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, 'aria-hidden': true as const, ...props };
   switch (name) {
+    case 'linkedin':
+      return <svg {...common}><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8v5.7H9.3V9h3.5v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.2 2.4 4.2 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4z" fill="currentColor" stroke="none"/></svg>;
     case 'github':
       return <svg {...common}><path d="M9 19c-4.3 1.3-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.8A5.3 5.3 0 0 0 18.8 4a4.9 4.9 0 0 0-.1-3S17.5.6 15 2.5a13.5 13.5 0 0 0-7 0C5.5.6 4.3 1 4.3 1A4.9 4.9 0 0 0 4.2 4a5.3 5.3 0 0 0-1.4 3.7c0 5.3 3.1 6.5 6.1 6.8A3.4 3.4 0 0 0 8 17.1V22"/></svg>;
     case 'youtube':
