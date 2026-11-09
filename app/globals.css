@@ -342,3 +342,40 @@ body{font-size:16px;line-height:1.75}
   .music-platform-primary>a{font-size:10.5px}
 }
 
+
+
+/* Final readability pass: keep real content comfortable to read on every screen. */
+body{font-size:16px;line-height:1.76}
+.hero-lede,.intro-lede,.section-heading>p,.vision-inner p,.contact-cta p,.about-copy p,.principle-grid p,.process-grid p,.project-feature-copy p,.game-copy p,.media-row p,.contact-intro-card>p,.whatsapp-panel>p,.detail-panel p,.detail-copy,.feature-list li,.skill-card p,.timeline-item p,.availability-panel p,.brand-company-panel p,.company-item p,.home-proof-grid p,.release-panel>p,.music-listen-copy p,.music-release-card>p,.book-enquiry-panel p,.footer-top>p,.investor-note,.hero-support{font-size:16px;line-height:1.8;font-weight:500}
+.discipline-card{display:flex;flex-direction:column;align-items:flex-start;height:100%;padding-bottom:21px}
+.discipline-card h3{font-size:16px;line-height:1.4;font-weight:750}
+.discipline-card p{font-size:16px;line-height:1.72;font-weight:500;margin:0}
+.discipline-card .card-arrow{position:static;left:auto;bottom:auto;margin-top:auto;padding-top:16px;font-size:13px;line-height:1.4}
+.text-link,.contact-detail>a,.footer-links a,.footer-contact,.music-platform-popover a,.contact-note,.muted-note{font-size:13px}
+.footer-links a{line-height:1.65}
+.project-meta,.breadcrumb,.contact-person small,.contact-detail small,.whatsapp-option small,.timeline-item .timeline-meta,.detail-fact small,.release-track span:last-child,.social-label,.footer-links span,.footer-bottom,.status,.book-saga-top,.book-saga-stage,.music-track-type,.music-track-number,.music-single-main small{font-size:12px}
+
+@media (min-width:761px) and (max-width:1100px){
+  .hero-lede,.intro-lede,.section-heading>p,.discipline-card p,.service-card p,.project-card p,.vision-inner p,.contact-cta p,.about-copy p,.principle-grid p,.process-grid p,.project-feature-copy p,.game-copy p,.media-row p,.contact-intro-card>p,.whatsapp-panel>p,.detail-panel p,.detail-copy,.feature-list li,.skill-card p,.timeline-item p,.availability-panel p,.brand-company-panel p,.company-item p,.home-proof-grid p,.release-panel>p,.music-listen-copy p,.music-release-card>p,.book-enquiry-panel p,.footer-top>p,.investor-note,.hero-support{font-size:16px}
+}
+
+@media (max-width:760px){
+  body{font-size:16px;line-height:1.75}
+  .hero-lede,.intro-lede,.section-heading>p,.discipline-card p,.service-card p,.project-card p,.vision-inner p,.contact-cta p,.about-copy p,.principle-grid p,.process-grid p,.project-feature-copy p,.game-copy p,.media-row p,.contact-intro-card>p,.whatsapp-panel>p,.detail-panel p,.detail-copy,.feature-list li,.skill-card p,.timeline-item p,.availability-panel p,.brand-company-panel p,.company-item p,.home-proof-grid p,.release-panel>p,.music-listen-copy p,.music-release-card>p,.book-enquiry-panel p,.footer-top>p,.investor-note,.hero-support{font-size:15.5px;line-height:1.78;font-weight:500}
+  .discipline-card{min-height:218px;padding:19px 15px 19px}
+  .discipline-card h3{font-size:16px;margin-bottom:9px}
+  .discipline-card p{font-size:15.5px;line-height:1.68}
+  .discipline-card .card-arrow{font-size:13px;padding-top:15px}
+  .service-card h3{font-size:15px}
+  .footer-links a,.text-link,.contact-detail>a,.footer-contact,.contact-note,.muted-note{font-size:13px}
+  .footer-bottom,.project-meta,.breadcrumb,.timeline-item .timeline-meta,.status{font-size:12px}
+  .music-platform-primary>a,.music-platform-more>summary{font-size:12px}
+  .music-track-title{font-size:13px}
+  .music-track-note{font-size:11px}
+  .mobile-nav-actions a{font-size:13px}
+}
+
+@media (max-width:420px){
+  .hero-lede,.intro-lede,.about-copy p,.detail-copy,.timeline-item p,.contact-intro-card>p,.whatsapp-panel>p{font-size:15.5px}
+  .discipline-card p{font-size:15px}
+}
