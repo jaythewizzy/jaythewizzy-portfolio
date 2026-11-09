@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
 import { createPageMetadata } from '@/lib/seo';
+import { JsonLd } from '@/components/json-ld';
+import { organizationStructuredData } from '@/lib/structured-data';
 
 export const metadata = createPageMetadata({
   title: 'WizzyLux Global Concepts',
@@ -22,6 +24,7 @@ const ventures = [
 export default function CompanyPage() {
   return (
     <>
+      <JsonLd data={organizationStructuredData} />
       <PageIntro eyebrow="PARENT COMPANY & ECOSYSTEM" title={<>WizzyLux Global<br /><em>Concepts.</em></>} description="The company founded by Stephen Omojola to build and manage independent products, platforms, brands and creative ventures — with a long-term ambition across media and technology." />
       <section className="section"><div className="shell">
         <div className="detail-grid">

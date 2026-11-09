@@ -4,6 +4,8 @@ import { ProjectCard } from '@/components/project-card';
 import { SocialLinks } from '@/components/social-links';
 import { projects } from '@/data/projects';
 import { createPageMetadata } from '@/lib/seo';
+import { JsonLd } from '@/components/json-ld';
+import { websiteStructuredData } from '@/lib/structured-data';
 
 export const metadata = createPageMetadata({
   title: 'Stephen Omojola | Software & AI Engineer',
@@ -20,6 +22,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={websiteStructuredData} />
       <section className="home-hero">
         <div className="hero-glow hero-glow-one" />
         <div className="hero-glow hero-glow-two" />
