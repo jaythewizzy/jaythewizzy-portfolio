@@ -9,6 +9,11 @@ export const dynamic = 'force-static';
 
 const base = 'https://jaythewizzy.com';
 
+function withTrailingSlash(path: string): string {
+  if (path === '/') return '/';
+  return `${path.replace(/\/+$/, '')}/`;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '', '/about', '/technology', '/studio', '/projects', '/games', '/music', '/books',
@@ -22,10 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...apps.map((app) => `/apps/${app.slug}`),
   ];
 
-  return [...staticRoutes, ...detailRoutes].map((route) => ({
-    url: `${base}${route || '/'}`,
-    lastModified: new Date(),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : route.split('/').length > 2 ? 0.65 : 0.8,
-  }));
+  return [...staticRoutes, ...detailRoutes].map((route) => {
+    const path = withTrailingSlash(route || '/');
+
+    return {
+      url: new URL(path, base).toString(),
+      lastModified: new Date(),
+      changeFrequency: route === '' ? 'weekly' : 'monthly',
+      priority: route === '' ? 1 : route.split('/').length > 2 ? 0.65 : 0.8,
+    };
+  });
 }
