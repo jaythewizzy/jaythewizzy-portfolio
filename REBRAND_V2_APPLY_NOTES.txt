@@ -1,0 +1,16 @@
+REBRAND V2 APPLY NOTES
+
+Extract this archive into the root of C:\Users\dell\jaythewizzy-portfolio with overwrite enabled. Do not delete the .git folder.
+
+After extraction, remove the superseded flat pages and old shared files:
+- about.html
+- studio.html
+- projects.html
+- games.html
+- media.html
+- contact.html
+- styles.css
+- site.js
+- assets/jaythewizzy-studio-portrait.webp (unused large AI-generated hero image)
+
+Keep index.html, 404.html, robots.txt, sitemap.xml, vercel.json, README.md, stephen-omojola-cv.pdf, and the assets directory.
