@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { RouteScrollReset } from '@/components/route-scroll-reset';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jaythewizzy.com'),
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <RouteScrollReset />
         <a className="skip-link" href="#main">Skip to content</a>
         <SiteHeader />
         <main id="main">{children}</main>
