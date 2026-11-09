@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowIcon, DownloadIcon, MenuIcon } from './icons';
 import { ThemeToggle } from './theme-toggle';
 
@@ -22,6 +22,37 @@ const navigation = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    function handleOutsidePointer(event: PointerEvent) {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+      if (navRef.current?.contains(target) || menuToggleRef.current?.contains(target)) return;
+      setMenuOpen(false);
+    }
+
+    function handleScroll() {
+      setMenuOpen(false);
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setMenuOpen(false);
+    }
+
+    document.addEventListener('pointerdown', handleOutsidePointer);
+    document.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      document.removeEventListener('pointerdown', handleOutsidePointer);
+      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [menuOpen]);
 
   return (
     <header className="site-header">
@@ -34,7 +65,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className={`main-nav${menuOpen ? ' is-open' : ''}`} id="main-navigation" aria-label="Main navigation">
+        <nav ref={navRef} className={`main-nav${menuOpen ? ' is-open' : ''}`} id="main-navigation" aria-label="Main navigation">
           {navigation.map((item) => {
             const active = item.href === '/' ? pathname === '/' : pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
@@ -48,7 +79,10 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Link className="mobile-cv-link" href="/cv" onClick={() => setMenuOpen(false)}>CV / Résumé</Link>
+          <div className="mobile-nav-actions">
+            <Link className="button button-small button-quiet mobile-cv-link" href="/cv" onClick={() => setMenuOpen(false)}>CV / Résumé</Link>
+            <Link className="button button-small button-outline mobile-contact-link" href="/contact" onClick={() => setMenuOpen(false)}>Get in touch <ArrowIcon /></Link>
+          </div>
         </nav>
 
         <div className="header-tools">
@@ -56,6 +90,7 @@ export function SiteHeader() {
           <ThemeToggle />
           <Link className="button button-small button-outline header-cta" href="/contact">Get in touch <ArrowIcon /></Link>
           <button
+            ref={menuToggleRef}
             className="menu-toggle"
             type="button"
             aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}

@@ -226,3 +226,15 @@
 /* Investor relations page */
 .investor-examples{margin-top:12px!important;color:var(--gold)!important;font-size:10px!important;font-weight:800;letter-spacing:.035em}
 .investor-note{margin-top:22px;padding:15px 17px;border-left:2px solid var(--gold);background:var(--gold-soft);color:var(--muted);font-size:11px;line-height:1.8}
+
+
+/* Mobile navigation actions and dismissal behavior. */
+.mobile-nav-actions{display:none}
+@media(max-width:760px){
+  .mobile-nav-actions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:16px}
+  .mobile-nav-actions a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:42px;padding:0 10px;border:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);border-radius:999px;font-size:10px;font-weight:800;white-space:nowrap}
+  .mobile-nav-actions .mobile-cv-link{display:flex;background:var(--surface);color:var(--text)}
+  .mobile-nav-actions .mobile-contact-link{background:var(--gold);border-color:var(--gold);color:#19150e}
+  .mobile-nav-actions a:after{display:none}
+  .mobile-nav-actions a svg{width:13px;height:13px}
+}
