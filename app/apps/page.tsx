@@ -1,15 +1,16 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ProjectCard } from '@/components/project-card';
 import { ArrowIcon } from '@/components/icons';
 import { apps } from '@/data/apps';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Apps',
-  description: 'Mobile and web applications created and shipped by Stephen Omojola — JaytheWizzy.',
-  alternates: { canonical: '/apps/' },
-};
+export const metadata = createPageMetadata({
+  title: 'Apps & Digital Products',
+  description: 'Mobile and web applications created and shipped by Stephen Omojola — JaytheWizzy. Explore LUXEN and future applications.',
+  path: '/apps/',
+  image: '/og/apps.jpg',
+});
 
 export default function AppsPage() {
   return (

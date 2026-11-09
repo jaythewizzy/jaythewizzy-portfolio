@@ -14,15 +14,20 @@ export const metadata: Metadata = {
   applicationName: 'JaytheWizzy Creative Studio',
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     siteName: 'JaytheWizzy',
     title: 'Stephen Omojola | Software & AI Engineer — JaytheWizzy',
     description: 'Software and AI engineering, independent products, games, music, books and future screen stories.',
-    url: 'https://jaythewizzy.com',
+    url: 'https://jaythewizzy.com/',
+    images: [{ url: 'https://jaythewizzy.com/og/home.jpg', width: 1200, height: 630, alt: 'Stephen Omojola — JaytheWizzy, Software & AI Engineer' }],
   },
   twitter: {
-    card: 'summary',
-    title: 'JaytheWizzy — Software & AI Engineer',
+    card: 'summary_large_image',
+    site: '@jaythewizzy',
+    creator: '@jaythewizzy',
+    title: 'Stephen Omojola | Software & AI Engineer — JaytheWizzy',
     description: 'Building software, products and original experiences.',
+    images: ['https://jaythewizzy.com/og/home.jpg'],
   },
   icons: { icon: '/assets/favicon.svg' },
 };

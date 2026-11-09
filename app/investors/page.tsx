@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon, MailIcon } from '@/components/icons';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Investors & Strategic Partners',
   description: 'Investor relations and strategic partnership enquiries for WizzyLux Global Concepts and its software, applications, games and media ventures.',
-  alternates: { canonical: '/investors/' },
-};
+  path: '/investors/',
+  image: '/og/investors.jpg',
+});
 
 const focusAreas = [
   {

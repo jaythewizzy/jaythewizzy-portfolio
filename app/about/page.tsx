@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon, DownloadIcon } from '@/components/icons';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'About Stephen Omojola',
   description: 'The background, approach and work of Stephen Omojola, known as JaytheWizzy — Software & AI Engineer and founder of WizzyLux Global Concepts.',
-  alternates: { canonical: '/about/' },
-};
+  path: '/about/',
+  image: '/og/about.jpg',
+});
 
 export default function AboutPage() {
   return (

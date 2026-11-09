@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Media, Music, Books & Film',
-  description: 'Released music, original fiction and developing film and television projects within the JaytheWizzy creative ecosystem.',
-  alternates: { canonical: '/media/' },
-};
+  description: 'Released music, original fiction in progress and developing film and television projects within the JaytheWizzy creative ecosystem.',
+  path: '/media/',
+  image: '/og/media.jpg',
+});
 
 export default function MediaPage() {
   return (

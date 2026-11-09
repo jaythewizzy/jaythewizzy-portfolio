@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Film & Television Development',
   description: 'The developing film and television direction within JaytheWizzy’s wider media and technology vision.',
-  alternates: { canonical: '/film-tv/' },
-};
+  path: '/film-tv/',
+  image: '/og/film-tv.jpg',
+});
 
 export default function FilmTvPage() {
   return (

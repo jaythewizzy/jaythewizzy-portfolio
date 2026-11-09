@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'JaytheWizzy Creative Studio',
   description: 'A practical creative and product development practice for software, AI, digital products, games, music and original stories.',
-  alternates: { canonical: '/studio/' },
-};
+  path: '/studio/',
+  image: '/og/studio.jpg',
+});
 
 const services = [
   ['Software & digital products', 'Web applications, mobile apps, APIs, dashboards, integrations and product engineering from architecture to launch.'],

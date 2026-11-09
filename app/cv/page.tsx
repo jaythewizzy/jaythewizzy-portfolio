@@ -1,14 +1,15 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon, DownloadIcon } from '@/components/icons';
 import { site } from '@/data/site';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'CV & Résumé',
-  description: 'Download the CV of Stephen Omojola — Software and AI Engineer.',
-  alternates: { canonical: '/cv/' },
-};
+  description: 'Download the CV of Stephen Omojola — Software and AI Engineer. Full-stack web and mobile development, AI, backend systems and production delivery.',
+  path: '/cv/',
+  image: '/og/cv.jpg',
+});
 
 export default function CvPage() {
   return (

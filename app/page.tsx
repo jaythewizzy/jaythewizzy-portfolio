@@ -3,6 +3,15 @@ import { ArrowIcon, DownloadIcon } from '@/components/icons';
 import { ProjectCard } from '@/components/project-card';
 import { SocialLinks } from '@/components/social-links';
 import { projects } from '@/data/projects';
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata = createPageMetadata({
+  title: 'Stephen Omojola | Software & AI Engineer',
+  description: 'Stephen Omojola, known as JaytheWizzy — Software & AI Engineer and founder of WizzyLux Global Concepts. Building software, AI-powered products, mobile applications, games and original media.',
+  path: '/',
+  image: '/og/home.jpg',
+  socialTitle: 'Stephen Omojola | Software & AI Engineer — JaytheWizzy',
+});
 
 export default function HomePage() {
   const featured = ['luxen', 'growthos', 'eurusd-trading-system']

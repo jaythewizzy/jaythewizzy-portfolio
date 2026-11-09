@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
 import { games, getGame } from '@/data/games';
+import { createPageMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -14,9 +15,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const game = getGame(slug);
-  return game ? { title: game.name, description: game.summary, alternates: { canonical: `/games/${slug}/` } } : { title: 'Game not found' };
+  if (!game) return { title: 'Game not found' };
+  return createPageMetadata({
+    title: game.name,
+    description: game.summary,
+    path: `/games/${slug}/`,
+    image: `/og/game-${slug}.jpg`,
+  });
 }
-
 export default async function GameDetailPage({ params }: Props) {
   const { slug } = await params;
   const game = getGame(slug);

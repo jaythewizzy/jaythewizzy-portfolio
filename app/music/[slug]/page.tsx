@@ -5,6 +5,7 @@ import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
 import { MusicPlatformLinks } from '@/components/music-platform-links';
 import { getMusicRelease, musicReleases } from '@/data/music';
+import { createPageMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,11 +16,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const release = getMusicRelease(slug);
-  return release
-    ? { title: `${release.title} · JaytheWizzy`, description: release.description, alternates: { canonical: `/music/${slug}/` } }
-    : { title: 'Release not found' };
+  if (!release) return { title: 'Release not found' };
+  return createPageMetadata({
+    title: release.title,
+    description: release.description,
+    path: `/music/${slug}/`,
+    image: `/og/music-${slug}.jpg`,
+    socialTitle: `${release.title} · JaytheWizzy`,
+  });
 }
-
 export default async function MusicReleasePage({ params }: Props) {
   const { slug } = await params;
   const release = getMusicRelease(slug);

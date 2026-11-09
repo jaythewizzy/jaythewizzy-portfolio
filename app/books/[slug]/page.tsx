@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
 import { books, getBook } from '@/data/books';
+import { createPageMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -14,9 +15,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const book = getBook(slug);
-  return book ? { title: book.title, description: book.summary, alternates: { canonical: `/books/${slug}/` } } : { title: 'Book not found' };
+  if (!book) return { title: 'Book not found' };
+  return createPageMetadata({
+    title: book.title,
+    description: book.summary,
+    path: `/books/${slug}/`,
+    image: `/og/book-${slug}.jpg`,
+  });
 }
-
 export default async function BookDetailPage({ params }: Props) {
   const { slug } = await params;
   const book = getBook(slug);

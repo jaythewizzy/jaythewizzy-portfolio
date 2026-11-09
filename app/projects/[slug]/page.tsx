@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
 import { getProject, projects } from '@/data/projects';
+import { createPageMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,9 +16,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return { title: 'Project not found' };
-  return { title: project.name, description: project.summary, alternates: { canonical: `/projects/${slug}/` } };
+  return createPageMetadata({
+    title: project.name,
+    description: project.summary,
+    path: `/projects/${slug}/`,
+    image: `/og/project-${slug}.jpg`,
+  });
 }
-
 export default async function ProjectDetailPage({ params }: Props) {
   const { slug } = await params;
   const project = getProject(slug);

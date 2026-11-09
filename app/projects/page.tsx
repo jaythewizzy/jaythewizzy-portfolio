@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ProjectCard } from '@/components/project-card';
@@ -6,12 +5,14 @@ import { ArrowIcon } from '@/components/icons';
 import { projects } from '@/data/projects';
 import { games } from '@/data/games';
 import { apps } from '@/data/apps';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Projects & Ventures',
   description: 'Software products, platforms, independent brands, trading systems and games developed by Stephen Omojola — JaytheWizzy.',
-  alternates: { canonical: '/projects/' },
-};
+  path: '/projects/',
+  image: '/og/projects.jpg',
+});
 
 export default function ProjectsPage() {
   return (

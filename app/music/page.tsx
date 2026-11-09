@@ -1,16 +1,16 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
 import { MusicPlatformLinks } from '@/components/music-platform-links';
 import { musicDistributionNote, musicEps, musicSingles } from '@/data/music';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Music by JaytheWizzy',
-  description:
-    'Explore The Life We Made, Beyond the Horizon and JaytheWizzy’s released Pop/Soul singles across Afrobeats, Pop/Soul and cinematic orchestral music.',
-  alternates: { canonical: '/music/' },
-};
+  description: 'Explore The Life We Made, Beyond the Horizon and JaytheWizzy’s released Pop/Soul singles across Afrobeats, Pop/Soul and cinematic orchestral music.',
+  path: '/music/',
+  image: '/og/music.jpg',
+});
 
 export default function MusicPage() {
   return (

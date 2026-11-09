@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'WizzyLux Global Concepts',
   description: 'The parent company and wider ecosystem behind independent software, games, brands, music and creative ventures founded by Stephen Omojola.',
-  alternates: { canonical: '/wizzy-lux-global-concepts/' },
-};
+  path: '/wizzy-lux-global-concepts/',
+  image: '/og/wizzy-lux-global-concepts.jpg',
+});
 
 const ventures = [
   ['LUXEN', 'Movie and television discovery across web and mobile.', '/projects/luxen', 'Live product'],

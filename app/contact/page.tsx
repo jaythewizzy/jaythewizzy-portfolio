@@ -1,15 +1,16 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon, MailIcon, WhatsAppIcon } from '@/components/icons';
 import { site } from '@/data/site';
 import { SocialLinks } from '@/components/social-links';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Contact & Work Enquiries',
   description: 'Contact Stephen Omojola — JaytheWizzy for remote Software & AI Engineering roles, freelance projects, commissioned development and partnerships.',
-  alternates: { canonical: '/contact/' },
-};
+  path: '/contact/',
+  image: '/og/contact.jpg',
+});
 
 export default function ContactPage() {
   return (

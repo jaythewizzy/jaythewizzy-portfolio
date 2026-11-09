@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon, DownloadIcon } from '@/components/icons';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Software & AI Engineering',
   description: 'Full-stack web and mobile development, backend systems, AI integrations, payments, cloud infrastructure and production delivery by Stephen Omojola.',
-  alternates: { canonical: '/technology/' },
-};
+  path: '/technology/',
+  image: '/og/technology.jpg',
+});
 
 const skills = [
   { title: 'Web engineering', items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vue', 'Angular'] },

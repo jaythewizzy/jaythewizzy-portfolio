@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { PageIntro } from '@/components/page-intro';
 import { ArrowIcon } from '@/components/icons';
 import { apps, getApp } from '@/data/apps';
+import { createPageMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -14,9 +15,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const app = getApp(slug);
-  return app ? { title: app.name, description: app.summary, alternates: { canonical: `/apps/${slug}/` } } : { title: 'App not found' };
+  if (!app) return { title: 'App not found' };
+  return createPageMetadata({
+    title: app.name,
+    description: app.summary,
+    path: `/apps/${slug}/`,
+    image: `/og/app-${slug}.jpg`,
+  });
 }
-
 export default async function AppDetailPage({ params }: Props) {
   const { slug } = await params;
   const app = getApp(slug);

@@ -60,3 +60,17 @@ Keep project-specific copy in data files whenever possible so a single page can 
 - Maintain customer-facing application catalogue entries in `data/apps.ts`. Each app creates `/apps/[slug]/` automatically.
 - Apps are also linked from the homepage ecosystem and the Projects overview. Keep Apps distinct from engineering case studies and Games.
 - The Investors page lives at `app/investors/page.tsx` (`/investors`). Keep statements factual: do not add unaudited revenue, user counts, valuations, investment terms or projected returns. Investment discussions are venture-specific.
+
+
+## Social preview metadata (Open Graph and X/Twitter)
+
+Page-specific search and social metadata is centralized through `lib/seo.ts`.
+
+- Static pages call `createPageMetadata()` from their `app/<route>/page.tsx` file.
+- Dynamic app, book, game, music and project detail pages build metadata inside `generateMetadata()` from their typed data entry.
+- Every social preview image lives in `public/og/` and is designed at 1200 × 630 pixels.
+- Canonical paths remain absolute-site-relative and trailing-slashed, matching `trailingSlash: true` in `next.config.ts`.
+
+When adding a new app, game, book, music release or project, add a matching branded image in `public/og/` using the current naming pattern (`app-<slug>.jpg`, `game-<slug>.jpg`, `book-<slug>.jpg`, `music-<slug>.jpg`, or `project-<slug>.jpg`). The dynamic metadata route will reference that file automatically. For a new static page, call `createPageMetadata()` with its title, description, canonical path and image path.
+
+The preview images are only social-sharing assets. They do not appear as product images or profile photos inside the website layout.

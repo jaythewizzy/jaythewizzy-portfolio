@@ -1,15 +1,16 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ProjectCard } from '@/components/project-card';
 import { ArrowIcon } from '@/components/icons';
 import { games } from '@/data/games';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Games & Interactive Projects',
-  description: 'Games and interactive systems by JaytheWizzy, including Coinwell and LifeLeague.',
-  alternates: { canonical: '/games/' },
-};
+  description: 'Games and interactive systems by JaytheWizzy, including Coinwell and LifeLeague. Explore each game, its status and technology.',
+  path: '/games/',
+  image: '/og/games.jpg',
+});
 
 export default function GamesPage() {
   return (

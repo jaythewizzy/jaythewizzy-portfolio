@@ -1,15 +1,16 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/page-intro';
 import { ProjectCard } from '@/components/project-card';
 import { ArrowIcon } from '@/components/icons';
 import { books } from '@/data/books';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Books & Original Stories',
   description: 'Original fiction in development by JaytheWizzy, including The Second Life of Julian Vale, a planned four-book saga. Book One, Play the Game, is in progress.',
-  alternates: { canonical: '/books/' },
-};
+  path: '/books/',
+  image: '/og/books.jpg',
+});
 
 export default function BooksPage() {
   return (
