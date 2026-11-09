@@ -3,28 +3,25 @@
   const themeButton = document.querySelector('[data-theme-toggle]');
   const menuButton = document.querySelector('[data-menu-toggle]');
   const nav = document.querySelector('[data-main-nav]');
-
-  let savedTheme = null;
-  try { savedTheme = localStorage.getItem('jay-theme'); } catch (_) {}
-  const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
-  root.dataset.theme = initialTheme;
-
-  function updateThemeButton(theme) {
+  let saved = null;
+  try { saved = localStorage.getItem('jay-theme'); } catch (_) {}
+  const preferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  const initial = saved === 'light' || saved === 'dark' ? saved : preferred;
+  root.dataset.theme = initial;
+  const updateTheme = (theme) => {
     if (!themeButton) return;
-    const isLight = theme === 'light';
-    themeButton.setAttribute('aria-pressed', String(isLight));
-    themeButton.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
-    themeButton.setAttribute('title', `Switch to ${isLight ? 'dark' : 'light'} theme`);
-  }
-  updateThemeButton(initialTheme);
-
+    const light = theme === 'light';
+    themeButton.setAttribute('aria-pressed', String(light));
+    themeButton.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+    themeButton.setAttribute('title', light ? 'Switch to dark theme' : 'Switch to light theme');
+  };
+  updateTheme(initial);
   themeButton?.addEventListener('click', () => {
     const next = root.dataset.theme === 'light' ? 'dark' : 'light';
     root.dataset.theme = next;
-    updateThemeButton(next);
+    updateTheme(next);
     try { localStorage.setItem('jay-theme', next); } catch (_) {}
   });
-
   menuButton?.addEventListener('click', () => {
     const open = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!open));
@@ -37,4 +34,7 @@
     menuButton?.setAttribute('aria-label', 'Open navigation');
   }));
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+  document.querySelectorAll('details.nav-dropdown').forEach(details => {
+    document.addEventListener('click', (event) => { if (!details.contains(event.target)) details.removeAttribute('open'); });
+  });
 })();

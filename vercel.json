@@ -8,13 +8,8 @@
       "permanent": true
     },
     {
-      "source": "/studio.html",
-      "destination": "/studio",
-      "permanent": true
-    },
-    {
-      "source": "/projects.html",
-      "destination": "/projects",
+      "source": "/technology.html",
+      "destination": "/technology",
       "permanent": true
     },
     {
@@ -28,8 +23,38 @@
       "permanent": true
     },
     {
+      "source": "/music.html",
+      "destination": "/music",
+      "permanent": true
+    },
+    {
+      "source": "/books.html",
+      "destination": "/books",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/studio.html",
+      "destination": "/studio",
+      "permanent": true
+    },
+    {
       "source": "/contact.html",
       "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/cv.html",
+      "destination": "/cv",
+      "permanent": true
+    },
+    {
+      "source": "/software",
+      "destination": "/technology",
       "permanent": true
     }
   ],
@@ -39,12 +64,8 @@
       "destination": "/about/index.html"
     },
     {
-      "source": "/studio",
-      "destination": "/studio/index.html"
-    },
-    {
-      "source": "/projects",
-      "destination": "/projects/index.html"
+      "source": "/technology",
+      "destination": "/technology/index.html"
     },
     {
       "source": "/games",
@@ -55,8 +76,28 @@
       "destination": "/media/index.html"
     },
     {
+      "source": "/music",
+      "destination": "/music/index.html"
+    },
+    {
+      "source": "/books",
+      "destination": "/books/index.html"
+    },
+    {
+      "source": "/projects",
+      "destination": "/projects/index.html"
+    },
+    {
+      "source": "/studio",
+      "destination": "/studio/index.html"
+    },
+    {
       "source": "/contact",
       "destination": "/contact/index.html"
+    },
+    {
+      "source": "/cv",
+      "destination": "/cv/index.html"
     }
   ],
   "headers": [
