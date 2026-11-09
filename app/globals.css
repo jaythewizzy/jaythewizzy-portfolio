@@ -449,3 +449,38 @@ body{font-size:16px;line-height:1.76}
 }
 
 /* Preserve the compact mobile composition and existing mobile monogram sizing. */
+
+/* Mobile hero-role alignment and tighter page entry spacing. */
+.page-intro{padding:26px 0 27px}
+.page-intro .breadcrumb{margin-bottom:12px}
+.page-intro h1{margin:9px 0 11px}
+.home-hero{padding-top:34px}
+
+@media (max-width:760px){
+  .hero-roles{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+    align-items:center;
+    justify-items:center;
+    width:100%;
+    gap:8px;
+    text-align:center;
+  }
+  .hero-roles span:nth-of-type(1){grid-column:1/-1}
+  .hero-roles span:nth-of-type(2){grid-column:1}
+  .hero-roles span:nth-of-type(3){grid-column:3}
+  .hero-roles i{display:none}
+  .hero-roles span{font-size:9px;letter-spacing:.15em;line-height:1.45}
+  .page-intro{padding:21px 0 23px}
+  .page-intro .breadcrumb{margin-bottom:10px}
+  .page-intro h1{margin:8px 0 10px}
+  .home-hero{padding-top:25px}
+}
+
+@media (min-width:1440px){
+  .home-hero{min-height:620px;padding-top:68px}
+}
+@media (min-width:1920px){
+  .home-hero{min-height:650px;padding-top:72px}
+}
+
