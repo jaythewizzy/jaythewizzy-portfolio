@@ -13,12 +13,12 @@ export const metadata = createPageMetadata({
 });
 
 const ventures = [
-  ['LUXEN', 'Movie and television discovery across web and mobile.', '/projects/luxen', 'Live product'],
-  ['GrowthOS', 'Digital services, wallet, marketplace and operating platform.', '/projects/growthos', 'Live platform'],
-  ['The Foundry', 'Multidisciplinary digital studio for product, UI/UX, AI and interactive work.', '/projects/the-foundry', 'In development'],
-  ['WizzyLux', 'Clothing and lifestyle brand with its own storefront and identity.', '/projects/wizzylux', 'Live brand'],
-  ['Coinwell', 'Casual progression game published by GrowthOS.', '/games/coinwell', 'Closed testing'],
-  ['LifeLeague', 'Multi-generation life simulation with a server-side game economy.', '/games/lifeleague', 'Release candidate'],
+  ['LUXEN', 'Movie and television discovery across web and mobile.', '/projects/luxen', 'Live product', 'status-live'],
+  ['GrowthOS', 'Digital services, wallet, marketplace and operating platform.', '/projects/growthos', 'Live platform', 'status-live'],
+  ['The Foundry', 'Multidisciplinary digital studio for product, UI/UX, AI and interactive work.', '/projects/the-foundry', 'In development', 'status-development'],
+  ['WizzyLux', 'Clothing and lifestyle brand with its own storefront and identity.', '/projects/wizzylux', 'Live brand', 'status-live'],
+  ['Coinwell', 'Casual progression game published by GrowthOS.', '/games/coinwell', 'Live on Google Play', 'status-live'],
+  ['LifeLeague', 'Multi-generation life simulation with a server-side game economy.', '/games/lifeleague', 'Release candidate', 'status-development'],
 ];
 
 export default function CompanyPage() {
@@ -34,7 +34,7 @@ export default function CompanyPage() {
       </div></section>
       <section className="section section-soft"><div className="shell">
         <div className="section-heading"><div><div className="eyebrow">THE PORTFOLIO</div><h2>Ventures across the <em>ecosystem.</em></h2></div><p>Each item is independently clickable, with its own project page and current status.</p></div>
-        <div className="company-list">{ventures.map(([name, description, href, status]) => <Link className="company-item company-item-link" key={name} href={href}><div className="project-meta"><span className="status status-development">{status}</span></div><h3>{name}</h3><p>{description}</p><span className="text-link">Open venture <ArrowIcon /></span></Link>)}</div>
+        <div className="company-list">{ventures.map(([name, description, href, status, statusTone]) => <Link className="company-item company-item-link" key={name} href={href}><div className="project-meta"><span className={`status ${statusTone}`}>{status}</span></div><h3>{name}</h3><p>{description}</p><span className="text-link">Open venture <ArrowIcon /></span></Link>)}</div>
         <div className="hero-actions"><Link className="button button-outline" href="/projects">All project details <ArrowIcon /></Link><Link className="button button-quiet" href="/contact">Partnership enquiries <ArrowIcon /></Link><Link className="text-link" href="/investors">Investor relations <ArrowIcon /></Link></div>
       </div></section>
     </>

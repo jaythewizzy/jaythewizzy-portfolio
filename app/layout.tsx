@@ -1,8 +1,15 @@
 import type { Metadata, Viewport } from 'next';
+import { DM_Sans, Manrope, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { RouteScrollReset } from '@/components/route-scroll-reset';
+
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' });
+const dmSans = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-dm-sans', display: 'swap' });
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['500', '600'], style: ['normal', 'italic'], variable: '--font-playfair', display: 'swap' });
+
+const themeBootstrap = `try { const saved = localStorage.getItem('jw-theme'); document.documentElement.dataset.theme = saved === 'light' ? 'light' : 'dark'; } catch { document.documentElement.dataset.theme = 'dark'; }`;
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jaythewizzy.com'),
@@ -41,7 +48,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+      </head>
+      <body className={`${manrope.variable} ${dmSans.variable} ${playfair.variable}`}>
         <RouteScrollReset />
         <a className="skip-link" href="#main">Skip to content</a>
         <SiteHeader />

@@ -9,10 +9,8 @@ export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
-    const stored = window.localStorage.getItem('jw-theme');
-    const nextTheme: Theme = stored === 'light' ? 'light' : 'dark';
-    setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
+    const activeTheme: Theme = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+    setTheme(activeTheme);
   }, []);
 
   function toggleTheme() {

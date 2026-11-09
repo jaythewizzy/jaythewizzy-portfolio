@@ -3,7 +3,7 @@ export type Game = {
   name: string;
   category: string;
   status: string;
-  statusTone: 'testing' | 'development';
+  statusTone: 'live' | 'testing' | 'development';
   summary: string;
   description: string[];
   stack: string[];
@@ -16,13 +16,13 @@ export const games: Game[] = [
     slug: 'coinwell',
     name: 'Coinwell',
     category: 'Casual progression game',
-    status: 'Google Play · Closed testing',
-    statusTone: 'testing',
+    status: 'Live on Google Play',
+    statusTone: 'live',
     summary: 'A progression game built around collecting, earning, upgrades, mastery and long-term play.',
     description: [
       'Coinwell is a casual progression game centred on collecting, earning, upgrading and mastering a growing world. Its Beyond the Vault expansion adds themed collections, daily and weekly contracts, events, achievements, Legacy progression and an optional New Journey reset.',
       'The game is designed around clear goals and satisfying progress, with an offline-friendly core loop and rewarded advertising integrated into the economy. Existing player progress is preserved through the expansion save migration.',
-      'Coinwell is published by GrowthOS and is currently distributed through Google Play closed testing.',
+      'Coinwell is published by GrowthOS and is live on Google Play.',
     ],
     stack: ['Expo', 'React Native', 'TypeScript', 'AsyncStorage', 'Google Mobile Ads', 'EAS Build'],
     highlights: ['Offline-friendly core gameplay and local saves', 'Vault collections, upgrades and mastery ranks', 'Daily and weekly contracts, Spotlight events and festivals', 'Achievements, Trophy Gallery and Legacy progression', 'Optional New Journey reset with retained legacy records'],
