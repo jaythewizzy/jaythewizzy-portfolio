@@ -72,7 +72,22 @@ export function SiteHeader() {
           <Link href="/" aria-current={isActive('/') ? 'page' : undefined} onClick={closeMenus}>Home</Link>
           <Link href="/technology" aria-current={isActive('/technology') ? 'page' : undefined} onClick={closeMenus}>Technology</Link>
 
-          <details className={`nav-dropdown${(['/apps', '/games', '/play'].some(isActive) ? ' has-current' : '')}`}>
+          <details
+            className={`nav-dropdown${(['/apps', '/games', '/play'].some(isActive) ? ' has-current' : '')}`}
+            onFocusCapture={(event) => {
+              const focusedMenu = event.currentTarget;
+              navRef.current?.querySelectorAll<HTMLDetailsElement>('.nav-dropdown').forEach((menu) => {
+                if (menu !== focusedMenu) menu.open = false;
+              });
+            }}
+            onToggle={(event) => {
+              const activeMenu = event.currentTarget;
+              if (!activeMenu.open) return;
+              navRef.current?.querySelectorAll<HTMLDetailsElement>('.nav-dropdown').forEach((menu) => {
+                if (menu !== activeMenu) menu.open = false;
+              });
+            }}
+          >
             <summary className="nav-dropdown-trigger">Play <span className="nav-chevron" aria-hidden="true" /></summary>
             <div className="nav-dropdown-menu" aria-label="Play destinations">
               <Link href="/apps" aria-current={isActive('/apps') ? 'page' : undefined} onClick={closeMenus}>Apps</Link>
@@ -81,15 +96,30 @@ export function SiteHeader() {
             </div>
           </details>
 
-          <details className={`nav-dropdown${(['/projects', '/studio', '/media'].some(isActive) ? ' has-current' : '')}`}>
+          <details
+            className={`nav-dropdown${(['/projects', '/studio'].some(isActive) ? ' has-current' : '')}`}
+            onFocusCapture={(event) => {
+              const focusedMenu = event.currentTarget;
+              navRef.current?.querySelectorAll<HTMLDetailsElement>('.nav-dropdown').forEach((menu) => {
+                if (menu !== focusedMenu) menu.open = false;
+              });
+            }}
+            onToggle={(event) => {
+              const activeMenu = event.currentTarget;
+              if (!activeMenu.open) return;
+              navRef.current?.querySelectorAll<HTMLDetailsElement>('.nav-dropdown').forEach((menu) => {
+                if (menu !== activeMenu) menu.open = false;
+              });
+            }}
+          >
             <summary className="nav-dropdown-trigger">Work <span className="nav-chevron" aria-hidden="true" /></summary>
-            <div className="nav-dropdown-menu" aria-label="Creative work destinations">
+            <div className="nav-dropdown-menu" aria-label="Work destinations">
               <Link href="/projects" aria-current={isActive('/projects') ? 'page' : undefined} onClick={closeMenus}>Projects</Link>
               <Link href="/studio" aria-current={isActive('/studio') ? 'page' : undefined} onClick={closeMenus}>Studio</Link>
-              <Link href="/media" aria-current={isActive('/media') ? 'page' : undefined} onClick={closeMenus}>Media & storytelling</Link>
             </div>
           </details>
 
+          <Link href="/media" aria-current={isActive('/media') ? 'page' : undefined} onClick={closeMenus}>Media</Link>
           <Link href="/investors" aria-current={isActive('/investors') ? 'page' : undefined} onClick={closeMenus}>Investors</Link>
           <Link href="/about" aria-current={isActive('/about') ? 'page' : undefined} onClick={closeMenus}>About</Link>
           <Link href="/contact" aria-current={isActive('/contact') ? 'page' : undefined} onClick={closeMenus}>Contact</Link>

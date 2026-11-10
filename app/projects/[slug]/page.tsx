@@ -39,7 +39,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <div className="detail-copy">{project.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
             {slug === 'luxen' && (
               <p className="investor-note">
-                <strong>Created by JaytheWizzy Creative Studio.</strong>{' '}
+                <strong>Created by JaytheWizzy.</strong>{' '}
                 Explore the live product at{' '}
                 <a href="https://luxen.watch" target="_blank" rel="noreferrer noopener">luxen.watch</a>.
               </p>

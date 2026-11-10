@@ -1119,3 +1119,169 @@ body {
   .detail-panel .stack-row .tag,
   .stack-row.stackRow .tag { font-size: 13.75px; }
 }
+
+
+/* Final hierarchy and readability refinements: keep content legible and card rows aligned. */
+.main-nav { gap: clamp(14px, 1.55vw, 22px); }
+.main-nav > a,
+.nav-dropdown-trigger { font-size: 14px; font-weight: 750; }
+
+/* Dropdowns open on activation/focus; do not show two separate menus on incidental hover. */
+.nav-dropdown:hover > .nav-dropdown-menu { display: none; }
+.nav-dropdown[open] > .nav-dropdown-menu,
+.nav-dropdown:focus-within > .nav-dropdown-menu { display: grid; gap: 2px; }
+
+/* Give the three primary homepage actions one balanced line on full desktop widths. */
+@media (min-width: 1181px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.14fr) minmax(390px, .86fr);
+    gap: 42px;
+  }
+
+  .hero-copy .hero-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-copy .hero-actions > .button {
+    flex: 0 0 auto;
+    min-width: 0;
+    min-height: 48px;
+    padding-inline: clamp(14px, 1.15vw, 18px);
+    gap: 8px;
+    font-size: 13.5px;
+    white-space: nowrap;
+  }
+}
+
+/* Project cards share consistent content rows so status, title, tags and actions line up. */
+.project-grid { align-items: stretch; }
+.project-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.project-card-link .project-meta {
+  min-height: 50px;
+  align-content: flex-start;
+  align-items: flex-start;
+  row-gap: 7px;
+}
+.project-card-link .project-meta > span:last-child {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.project-card-link h3 {
+  min-height: 2.65em;
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--sans);
+  font-size: clamp(19px, 1.25vw, 22px);
+  line-height: 1.35;
+  font-weight: 750;
+}
+.project-card-link p {
+  min-height: 5.15em;
+  font-family: var(--sans);
+  font-size: clamp(16px, calc(15.5px + .14vw), 17.5px);
+  font-weight: 500;
+  line-height: 1.72;
+}
+.project-card-link .project-tags {
+  min-height: 66px;
+  align-content: flex-start;
+  gap: 8px;
+}
+.project-tags .tag {
+  min-height: 30px;
+  padding: 6px 10px;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.35;
+  font-weight: 650;
+}
+.project-card-link > .text-link {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+/* Project detail technology pills and facts are readable on every device. */
+.detail-panel .stack-row .tag,
+.skill-card .stack-row .tag,
+.stack-row.stackRow .tag {
+  min-height: 35px;
+  padding: 7px 12px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+.detail-fact small {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 750;
+}
+.detail-fact strong {
+  font-family: var(--sans);
+  font-size: 15.5px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+.detail-copy,
+.detail-panel p,
+.feature-list li,
+.timeline-item p {
+  font-family: var(--sans);
+  font-size: 16.5px;
+  line-height: 1.78;
+}
+.project-meta,
+.status,
+.breadcrumb,
+.timeline-item .timeline-meta {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+/* On smaller screens keep natural card heights while retaining readable tags. */
+@media (max-width: 760px) {
+  .project-card-link .project-meta,
+  .project-card-link h3,
+  .project-card-link p,
+  .project-card-link .project-tags {
+    min-height: 0;
+  }
+  .project-card-link h3 { display: block; }
+  .project-card-link p { font-size: 16px; }
+  .project-tags .tag { font-size: 13px; }
+  .detail-panel .stack-row .tag,
+  .skill-card .stack-row .tag,
+  .stack-row.stackRow .tag {
+    min-height: 32px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  .detail-copy,
+  .detail-panel p,
+  .feature-list li,
+  .timeline-item p { font-size: 16px; }
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .hero-copy .hero-actions { flex-wrap: wrap; }
+  .project-card-link .project-tags { min-height: 66px; }
+}
+
+@media (min-width: 1440px) {
+  .project-tags .tag { font-size: 14px; }
+  .detail-panel .stack-row .tag,
+  .skill-card .stack-row .tag,
+  .stack-row.stackRow .tag { font-size: 16px; }
+}
