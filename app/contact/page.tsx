@@ -22,9 +22,8 @@ export default function ContactPage() {
           <h2>Tell me what you&apos;re <em>building.</em></h2>
           <p>Share the role, project, challenge or idea. For formal employment and project enquiries, email is usually the best starting point. You can also connect with me through the professional and social profiles below.</p>
           <div className="contact-detail"><span className="contact-icon"><MailIcon /></span><div><small>EMAIL</small><b>{site.email}</b></div><a href={`mailto:${site.email}?subject=JaytheWizzy%20-%20Professional%20Enquiry`}>Write an email <ArrowIcon /></a></div>
-          <div className="contact-detail"><span className="contact-icon">PL</span><div><small>DEVELOPER PLATFORMS</small><b>Google Play · App Store</b></div><Link href="/play/">Choose a platform <ArrowIcon /></Link></div>
           <div className="contact-detail"><span className="contact-icon">CV</span><div><small>CV / RÉSUMÉ</small><b>Software & AI Engineering profile</b></div><Link href="/cv">View CV <ArrowIcon /></Link></div>
-          <div className="social-label">FOLLOW, CONNECT &amp; REACH OUT · @JAYTHEWIZZY</div><SocialLinks exclude={['Spotify']} />
+          <div className="social-label">FOLLOW, CONNECT &amp; REACH OUT · @JAYTHEWIZZY</div><SocialLinks />
         </div>
         <div className="whatsapp-panel">
           <div className="eyebrow">DIRECT MESSAGE</div>

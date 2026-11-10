@@ -37,6 +37,13 @@ export default async function ProjectDetailPage({ params }: Props) {
             <div className="project-meta"><span className={`status status-${project.statusTone}`}>{project.status}</span><span>{project.category}</span></div>
             <h2>What it is. <em>What it does.</em></h2>
             <div className="detail-copy">{project.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+            {slug === 'luxen' && (
+              <p className="investor-note">
+                <strong>Created by JaytheWizzy Creative Studio.</strong>{' '}
+                Explore the live product at{' '}
+                <a href="https://luxen.watch" target="_blank" rel="noreferrer noopener">luxen.watch</a>.
+              </p>
+            )}
             <div className="section-subhead"><div className="eyebrow">SELECTED WORK</div><h3>Core capabilities</h3></div>
             <ul className="feature-list">{project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
           </article>
