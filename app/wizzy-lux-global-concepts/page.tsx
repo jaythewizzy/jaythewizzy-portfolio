@@ -13,7 +13,7 @@ export const metadata = createPageMetadata({
 });
 
 const ventures = [
-  ['LUXEN', 'Movie and television discovery across web and mobile.', '/projects/luxen', 'Live product', 'status-live'],
+  ['LUXEN', 'Discovery for movies, anime and TV series across web and mobile.', '/projects/luxen', 'Live product', 'status-live'],
   ['GrowthOS', 'Digital services, wallet, marketplace and operating platform.', '/projects/growthos', 'Live platform', 'status-live'],
   ['The Foundry', 'Multidisciplinary digital studio for product, UI/UX, AI and interactive work.', '/projects/the-foundry', 'In development', 'status-development'],
   ['WizzyLux', 'Clothing and lifestyle brand with its own storefront and identity.', '/projects/wizzylux', 'Live brand', 'status-live'],

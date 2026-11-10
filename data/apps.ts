@@ -22,11 +22,11 @@ export const apps: AppProduct[] = [
   {
     slug: 'luxen',
     name: 'LUXEN',
-    category: 'Movie & TV discovery application',
+    category: 'Movies, Anime & TV Series Discovery',
     status: 'Live · Android, iOS & web',
-    summary: 'A movie and television discovery experience across web and mobile, helping people find their next obsession.',
+    summary: 'A discovery platform for movies, anime and TV series across web and mobile, helping people find their next obsession.',
     description: [
-      'LUXEN is a movie and television discovery product available as a web platform and mobile application. It brings discovery, search, trailers, watchlists and viewing information into one connected experience.',
+      'LUXEN is a discovery platform for movies, anime and TV series, available on web and mobile. It brings discovery, search, trailers, watchlists and viewing information into one connected experience.',
       'The mobile applications are built with Expo and React Native for Android and iOS, including support for phones and tablets. The web experience is built with Next.js, with a shared Supabase-backed product ecosystem.',
       'The product includes timed rewarded-ad access, VIP subscriptions and access codes. Its wider engineering work includes server-side RevenueCat purchase reconciliation, push notifications, consent-gated advertising and analytics, cached status endpoints, rate limiting and SEO.',
     ],
@@ -34,7 +34,7 @@ export const apps: AppProduct[] = [
     stack: ['Expo', 'React Native', 'TypeScript', 'Next.js', 'Supabase', 'RevenueCat', 'Paystack', 'AdMob', 'Firebase', 'Vercel'],
     highlights: [
       'Native mobile experiences for Android and iOS, alongside the web platform',
-      'Movie and TV discovery, search, trailers, watchlists and viewing information',
+      'Movies, anime and TV series discovery, search, trailers, watchlists and viewing information',
       'Rewarded-access, VIP subscription and access-code systems',
       'Server-side purchase reconciliation and account handling',
       'Push notifications, consent-aware advertising, analytics and SEO',

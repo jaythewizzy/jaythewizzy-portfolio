@@ -38,3 +38,11 @@ The pending checks recorded in earlier entries have since been resolved:
 - Coinwell is **Live on Google Play** and remains published by GrowthOS. Its publishing and privacy resources remain with GrowthOS.
 - Telegram now uses the recovered public handle `@jaythewizzy` (`https://t.me/jaythewizzy`).
 - The `/play/` developer-platform hub is part of the current route structure.
+
+## Portfolio content and audit refresh — November 10, 2026
+
+- Source baseline: `0f209ea` on `main` (the navbar scroll/readability update).
+- Aligned the LUXEN app, project, About, Technology and parent-company copy to describe it as a discovery platform for movies, anime and TV series.
+- Added a content-guide guardrail to preserve that product positioning in future edits.
+- Refreshed `SITE_AUDIT_NOTES.md` with the supplied successful typecheck/build evidence and the 36/36 static-page generation result.
+- The exact file-level scope and validation provenance are documented in `LUXEN_POSITIONING_AND_AUDIT_REFRESH.md`.
