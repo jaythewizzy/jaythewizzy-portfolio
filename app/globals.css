@@ -697,3 +697,224 @@ body{font-size:16px;line-height:1.76}
   .detail-panel .stack-row .tag,
   .stack-row.stackRow .tag { font-size: 15px; }
 }
+
+
+
+/* Desktop reading-size correction: retain serif display headings, use clear sans-serif body copy. */
+@media (min-width: 761px) {
+  body {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.78;
+  }
+
+  .hero-lede,
+  .intro-lede,
+  .section-heading > p,
+  .discipline-card p,
+  .service-card p,
+  .project-card p,
+  .vision-inner p,
+  .contact-cta p,
+  .about-copy p,
+  .principle-grid p,
+  .process-grid p,
+  .project-feature-copy p,
+  .game-copy p,
+  .media-row p,
+  .contact-intro-card > p,
+  .whatsapp-panel > p,
+  .detail-panel p,
+  .detail-copy,
+  .feature-list li,
+  .skill-card p,
+  .timeline-item p,
+  .availability-panel p,
+  .brand-company-panel p,
+  .company-item p,
+  .home-proof-grid p,
+  .release-panel > p,
+  .music-listen-copy p,
+  .music-release-card > p,
+  .book-enquiry-panel p,
+  .footer-top > p,
+  .investor-note,
+  .hero-support {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.82;
+    font-weight: 550;
+  }
+
+  .hero-lede,
+  .intro-lede {
+    font-size: 18px;
+    line-height: 1.82;
+  }
+
+  .skill-card h3,
+  .discipline-card h3,
+  .service-card h3,
+  .principle-grid h3,
+  .process-grid h3,
+  .detail-panel h3,
+  .timeline-item h3,
+  .company-item h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 750;
+  }
+
+  .skill-card .stack-row .tag,
+  .detail-panel .stack-row .tag,
+  .stack-row.stackRow .tag {
+    min-height: 36px;
+    padding: 8px 13px;
+    font-family: var(--sans);
+    font-size: 15.5px;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  .skill-card .stack-row,
+  .detail-panel .stack-row {
+    gap: 10px;
+    row-gap: 10px;
+  }
+
+  .detail-fact small {
+    font-family: var(--sans);
+    font-size: 12.5px;
+    font-weight: 750;
+    letter-spacing: .12em;
+  }
+
+  .detail-fact strong {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .detail-copy,
+  .detail-panel p,
+  .feature-list li {
+    font-size: 16.5px;
+    line-height: 1.82;
+  }
+
+  .timeline-item p {
+    font-size: 16.5px;
+    line-height: 1.82;
+  }
+
+  .project-meta,
+  .status,
+  .breadcrumb,
+  .timeline-item .timeline-meta {
+    font-family: var(--sans);
+    font-size: 12.5px;
+    font-weight: 650;
+  }
+
+  .button,
+  .text-link,
+  .contact-detail > a,
+  .footer-links a,
+  .footer-contact {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 750;
+  }
+}
+
+/* Keep tablet copy slightly more compact while making it easy to scan. */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .hero-lede,
+  .intro-lede,
+  .section-heading > p,
+  .discipline-card p,
+  .service-card p,
+  .project-card p,
+  .vision-inner p,
+  .contact-cta p,
+  .about-copy p,
+  .principle-grid p,
+  .process-grid p,
+  .project-feature-copy p,
+  .game-copy p,
+  .media-row p,
+  .contact-intro-card > p,
+  .whatsapp-panel > p,
+  .detail-panel p,
+  .detail-copy,
+  .feature-list li,
+  .skill-card p,
+  .timeline-item p,
+  .availability-panel p,
+  .brand-company-panel p,
+  .company-item p,
+  .home-proof-grid p,
+  .release-panel > p,
+  .music-listen-copy p,
+  .music-release-card > p,
+  .book-enquiry-panel p,
+  .footer-top > p,
+  .investor-note,
+  .hero-support {
+    font-size: 16px;
+  }
+}
+
+/* Give large desktop and ultrawide layouts a modest additional size increase. */
+@media (min-width: 1440px) {
+  body { font-size: 18px; }
+
+  .hero-lede,
+  .intro-lede {
+    font-size: 18.5px;
+  }
+
+  .hero-lede,
+  .intro-lede,
+  .section-heading > p,
+  .discipline-card p,
+  .service-card p,
+  .project-card p,
+  .vision-inner p,
+  .contact-cta p,
+  .about-copy p,
+  .principle-grid p,
+  .process-grid p,
+  .project-feature-copy p,
+  .game-copy p,
+  .media-row p,
+  .contact-intro-card > p,
+  .whatsapp-panel > p,
+  .detail-panel p,
+  .detail-copy,
+  .feature-list li,
+  .skill-card p,
+  .timeline-item p,
+  .availability-panel p,
+  .brand-company-panel p,
+  .company-item p,
+  .home-proof-grid p,
+  .release-panel > p,
+  .music-listen-copy p,
+  .music-release-card > p,
+  .book-enquiry-panel p,
+  .footer-top > p,
+  .investor-note,
+  .hero-support {
+    font-size: 18px;
+  }
+
+  .skill-card .stack-row .tag,
+  .detail-panel .stack-row .tag,
+  .stack-row.stackRow .tag {
+    font-size: 16px;
+  }
+}
+
+/* Mobile sizing is intentionally unchanged: the reported readability issue is desktop-first. */
