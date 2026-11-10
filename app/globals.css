@@ -918,3 +918,204 @@ body{font-size:16px;line-height:1.76}
 }
 
 /* Mobile sizing is intentionally unchanged: the reported readability issue is desktop-first. */
+
+
+/* All-device readability pass: body copy and technical information must stay legible on every screen. */
+body {
+  font-family: var(--sans);
+  font-size: clamp(16px, calc(15.5px + .18vw), 18px);
+  line-height: 1.76;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hero-lede,
+.intro-lede,
+.section-heading > p,
+.discipline-card p,
+.service-card p,
+.project-card p,
+.vision-inner p,
+.contact-cta p,
+.about-copy p,
+.principle-grid p,
+.process-grid p,
+.project-feature-copy p,
+.game-copy p,
+.media-row p,
+.contact-intro-card > p,
+.whatsapp-panel > p,
+.detail-panel p,
+.detail-copy,
+.feature-list li,
+.skill-card p,
+.timeline-item p,
+.availability-panel p,
+.brand-company-panel p,
+.company-item p,
+.home-proof-grid p,
+.release-panel > p,
+.music-listen-copy p,
+.music-release-card > p,
+.book-enquiry-panel p,
+.footer-top > p,
+.investor-note,
+.hero-support {
+  font-family: var(--sans);
+  font-size: clamp(16px, calc(15.5px + .16vw), 18px);
+  line-height: 1.78;
+  font-weight: 500;
+}
+
+.hero-lede,
+.intro-lede {
+  font-size: clamp(16.5px, calc(16px + .2vw), 19px);
+  line-height: 1.8;
+}
+
+.discipline-card p,
+.service-card p,
+.project-card p,
+.skill-card p,
+.detail-panel p,
+.detail-copy,
+.timeline-item p,
+.feature-list li {
+  font-size: clamp(15.75px, calc(15.25px + .17vw), 17.5px);
+  line-height: 1.76;
+}
+
+.skill-card h3,
+.discipline-card h3,
+.service-card h3,
+.principle-grid h3,
+.process-grid h3,
+.detail-panel h3,
+.timeline-item h3,
+.company-item h3 {
+  font-family: var(--sans);
+  font-size: clamp(16px, calc(15.5px + .12vw), 18px);
+  line-height: 1.42;
+  font-weight: 750;
+}
+
+/* Technology stack labels: the pills are content, not decorative micro-labels. */
+.skill-card .stack-row .tag,
+.detail-panel .stack-row .tag,
+.stack-row.stackRow .tag {
+  min-height: 34px;
+  padding: 7px 12px;
+  font-family: var(--sans);
+  font-size: clamp(14px, calc(13.6px + .14vw), 15.75px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.skill-card .stack-row,
+.detail-panel .stack-row {
+  gap: 9px 10px;
+}
+
+/* Project catalogue tags and detail values should be readable but secondary to headings. */
+.project-tags .tag {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 650;
+  line-height: 1.4;
+  padding: 6px 9px;
+}
+
+.project-meta,
+.status,
+.breadcrumb,
+.timeline-item .timeline-meta {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.5;
+  font-weight: 650;
+}
+
+.detail-fact small {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.5;
+  font-weight: 750;
+  letter-spacing: .1em;
+}
+
+.detail-fact strong,
+.contact-detail b,
+.contact-person b,
+.whatsapp-option b,
+.cv-summary-grid strong,
+.home-proof-grid b,
+.release-track,
+.music-track-title,
+.music-single-main strong {
+  font-family: var(--sans);
+  font-size: clamp(14.5px, calc(14px + .1vw), 16px);
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.music-track-title { font-size: 14px; }
+.music-track-note { font-size: 12.5px; line-height: 1.65; }
+.music-track-type,
+.music-track-number,
+.music-single-main small,
+.release-track span:last-child { font-size: 12px; }
+
+.button,
+.text-link,
+.contact-detail > a,
+.footer-links a,
+.footer-contact,
+.music-platform-primary > a,
+.music-platform-more > summary {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+/* Keep true utility labels compact, but never let them collapse to unreadable 8–10px text. */
+.footer-links span,
+.footer-bottom,
+.contact-detail small,
+.contact-person small,
+.whatsapp-option small,
+.social-label {
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  body { font-size: 16px; line-height: 1.75; }
+
+  .hero-lede,
+  .intro-lede {
+    font-size: clamp(16px, 4.25vw, 17.5px);
+    line-height: 1.78;
+  }
+
+  .skill-card .stack-row .tag,
+  .detail-panel .stack-row .tag,
+  .stack-row.stackRow .tag {
+    min-height: 32px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .project-tags .tag { font-size: 12.5px; }
+  .button,.text-link,.contact-detail > a,.footer-links a,.footer-contact { font-size: 14px; }
+}
+
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .hero-lede,.intro-lede { font-size: 16px; }
+  .skill-card .stack-row .tag,
+  .detail-panel .stack-row .tag,
+  .stack-row.stackRow .tag { font-size: 13.75px; }
+}
