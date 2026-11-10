@@ -484,3 +484,34 @@ body{font-size:16px;line-height:1.76}
   .home-hero{min-height:650px;padding-top:72px}
 }
 
+
+/* Balance the three role labels on narrow screens: two centered rows. */
+@media (max-width: 760px) {
+  .hero-roles {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-template-areas:
+      "primary primary primary"
+      "creative separator founder";
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    text-align: center;
+  }
+
+  .hero-roles span:nth-of-type(1) { grid-area: primary; }
+  .hero-roles span:nth-of-type(2) { grid-area: creative; }
+  .hero-roles span:nth-of-type(3) { grid-area: founder; }
+  .hero-roles i:nth-of-type(1) { display: none; }
+  .hero-roles i:nth-of-type(2) {
+    display: block;
+    grid-area: separator;
+    padding-inline: 0;
+  }
+  .hero-roles span {
+    font-size: clamp(9px, 2.5vw, 10px);
+    letter-spacing: .13em;
+    line-height: 1.45;
+  }
+}
