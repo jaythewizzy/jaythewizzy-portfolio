@@ -2,23 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { ArrowIcon, DownloadIcon, MenuIcon } from './icons';
 import { ThemeToggle } from './theme-toggle';
-
-const navigation = [
-  { label: 'Home', href: '/' },
-  { label: 'Technology', href: '/technology' },
-  { label: 'Apps', href: '/apps' },
-  { label: 'Play', href: '/play' },
-  { label: 'Studio', href: '/studio' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Investors', href: '/investors' },
-  { label: 'Games', href: '/games' },
-  { label: 'Media', href: '/media' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-];
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -26,22 +12,38 @@ export function SiteHeader() {
   const navRef = useRef<HTMLElement>(null);
   const menuToggleRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    if (!menuOpen) return;
+  const isActive = useCallback((href: string) => (
+    href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`)
+  ), [pathname]);
 
+  const closeMenus = useCallback(() => {
+    setMenuOpen(false);
+    navRef.current?.querySelectorAll<HTMLDetailsElement>('.nav-dropdown').forEach((menu) => {
+      menu.open = false;
+    });
+  }, []);
+
+  useEffect(() => {
+    closeMenus();
+  }, [pathname, closeMenus]);
+
+  useEffect(() => {
     function handleOutsidePointer(event: PointerEvent) {
       const target = event.target;
       if (!(target instanceof Node)) return;
       if (navRef.current?.contains(target) || menuToggleRef.current?.contains(target)) return;
-      setMenuOpen(false);
+      closeMenus();
     }
 
     function handleScroll() {
-      setMenuOpen(false);
+      closeMenus();
     }
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') setMenuOpen(false);
+      if (event.key === 'Escape') {
+        closeMenus();
+        menuToggleRef.current?.focus();
+      }
     }
 
     document.addEventListener('pointerdown', handleOutsidePointer);
@@ -53,12 +55,12 @@ export function SiteHeader() {
       document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [menuOpen]);
+  }, [menuOpen, closeMenus]);
 
   return (
     <header className="site-header">
       <div className="shell header-inner">
-        <Link className="brand" href="/" aria-label="JaytheWizzy home" onClick={() => setMenuOpen(false)}>
+        <Link className="brand" href="/" aria-label="JaytheWizzy home" onClick={closeMenus}>
           <span className="brand-mark">JW</span>
           <span className="brand-lockup">
             <span className="brand-name">JAYTHEWIZZY</span>
@@ -67,22 +69,33 @@ export function SiteHeader() {
         </Link>
 
         <nav ref={navRef} className={`main-nav${menuOpen ? ' is-open' : ''}`} id="main-navigation" aria-label="Main navigation">
-          {navigation.map((item) => {
-            const active = item.href === '/' ? pathname === '/' : pathname === item.href || pathname.startsWith(`${item.href}/`);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={active ? 'page' : undefined}
-                onClick={() => setMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          <Link href="/" aria-current={isActive('/') ? 'page' : undefined} onClick={closeMenus}>Home</Link>
+          <Link href="/technology" aria-current={isActive('/technology') ? 'page' : undefined} onClick={closeMenus}>Technology</Link>
+
+          <details className={`nav-dropdown${(['/apps', '/games', '/play'].some(isActive) ? ' has-current' : '')}`}>
+            <summary className="nav-dropdown-trigger">Play <span className="nav-chevron" aria-hidden="true" /></summary>
+            <div className="nav-dropdown-menu" aria-label="Play destinations">
+              <Link href="/apps" aria-current={isActive('/apps') ? 'page' : undefined} onClick={closeMenus}>Apps</Link>
+              <Link href="/games" aria-current={isActive('/games') ? 'page' : undefined} onClick={closeMenus}>Games</Link>
+              <Link href="/play" aria-current={isActive('/play') ? 'page' : undefined} onClick={closeMenus}>Developer platforms</Link>
+            </div>
+          </details>
+
+          <details className={`nav-dropdown${(['/projects', '/studio', '/media'].some(isActive) ? ' has-current' : '')}`}>
+            <summary className="nav-dropdown-trigger">Work <span className="nav-chevron" aria-hidden="true" /></summary>
+            <div className="nav-dropdown-menu" aria-label="Creative work destinations">
+              <Link href="/projects" aria-current={isActive('/projects') ? 'page' : undefined} onClick={closeMenus}>Projects</Link>
+              <Link href="/studio" aria-current={isActive('/studio') ? 'page' : undefined} onClick={closeMenus}>Studio</Link>
+              <Link href="/media" aria-current={isActive('/media') ? 'page' : undefined} onClick={closeMenus}>Media & storytelling</Link>
+            </div>
+          </details>
+
+          <Link href="/investors" aria-current={isActive('/investors') ? 'page' : undefined} onClick={closeMenus}>Investors</Link>
+          <Link href="/about" aria-current={isActive('/about') ? 'page' : undefined} onClick={closeMenus}>About</Link>
+          <Link href="/contact" aria-current={isActive('/contact') ? 'page' : undefined} onClick={closeMenus}>Contact</Link>
           <div className="mobile-nav-actions">
-            <Link className="button button-small button-quiet mobile-cv-link" href="/cv" onClick={() => setMenuOpen(false)}>CV / Résumé</Link>
-            <Link className="button button-small button-outline mobile-contact-link" href="/contact" onClick={() => setMenuOpen(false)}>Get in touch <ArrowIcon /></Link>
+            <Link className="button button-small button-quiet mobile-cv-link" href="/cv" onClick={closeMenus}>CV / Résumé</Link>
+            <Link className="button button-small button-outline mobile-contact-link" href="/contact" onClick={closeMenus}>Get in touch <ArrowIcon /></Link>
           </div>
         </nav>
 

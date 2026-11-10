@@ -39,3 +39,7 @@
   .featured { align-items: flex-start; flex-direction: column; padding: 22px; }
   .featured .button { width: 100%; }
 }
+
+.catalogueLinks { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.catalogueLinks :global(.button) { min-width: 150px; font-size: 14px; }
+@media (max-width: 760px) { .catalogueLinks { display: grid; grid-template-columns: 1fr 1fr; } .catalogueLinks :global(.button) { min-width: 0; padding-inline: 12px; font-size: 13px; } }

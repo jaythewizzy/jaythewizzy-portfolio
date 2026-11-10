@@ -564,3 +564,136 @@ body{font-size:16px;line-height:1.76}
   .mobile-nav-actions a:after { display: none; }
   .mobile-nav-actions a svg { width: 14px; height: 14px; }
 }
+
+
+/* Navigation simplification: group product and creative destinations under two clear menus. */
+.main-nav { gap: clamp(17px, 2vw, 27px); }
+.main-nav > a,
+.nav-dropdown-trigger {
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: .015em;
+}
+.nav-dropdown { position: relative; display: flex; align-items: center; }
+.nav-dropdown-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 31px 0;
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+  transition: color .2s;
+}
+.nav-dropdown-trigger::-webkit-details-marker { display: none; }
+.nav-dropdown-trigger::marker { content: ""; }
+.nav-dropdown:hover > .nav-dropdown-trigger,
+.nav-dropdown:focus-within > .nav-dropdown-trigger,
+.nav-dropdown.has-current > .nav-dropdown-trigger { color: var(--text); }
+.nav-dropdown.has-current > .nav-dropdown-trigger::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  height: 2px;
+  background: var(--gold);
+}
+.nav-chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .18s ease;
+}
+.nav-dropdown[open] .nav-chevron { transform: translateY(2px) rotate(225deg); }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% - 9px);
+  left: -18px;
+  z-index: 90;
+  min-width: 225px;
+  padding: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.nav-dropdown:hover > .nav-dropdown-menu,
+.nav-dropdown:focus-within > .nav-dropdown-menu,
+.nav-dropdown[open] > .nav-dropdown-menu { display: grid; gap: 2px; }
+.nav-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 12px !important;
+  border: 0 !important;
+  border-radius: 9px;
+  font-size: 13px !important;
+  font-weight: 650;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a[aria-current="page"] { background: var(--gold-soft); color: var(--text); }
+.nav-dropdown-menu a::after { display: none !important; }
+
+/* Technology stack labels were inheriting a legacy 10px rule. Make them genuinely readable. */
+.skill-card .stack-row .tag,
+.detail-panel .stack-row .tag,
+.stack-row.stackRow .tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface2);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+.skill-card .stack-row,
+.detail-panel .stack-row { gap: 9px; }
+.detail-fact small { font-size: 11px; }
+.detail-fact strong { font-size: 14px; line-height: 1.55; }
+.detail-copy { font-size: 15px; line-height: 1.85; }
+.detail-panel p { font-size: 15px; line-height: 1.75; }
+.feature-list li { font-size: 14.5px; line-height: 1.7; }
+.timeline-item p { font-size: 15px; line-height: 1.8; }
+
+/* Compact navigation on tablets and smaller laptops; submenu expands inside the panel. */
+@media (min-width: 761px) and (max-width: 1180px) {
+  .nav-dropdown { display: block; }
+  .nav-dropdown-trigger { width: 100%; padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .nav-dropdown.has-current > .nav-dropdown-trigger::before { bottom: 5px; right: auto; width: 28px; }
+  .nav-dropdown-menu { position: static; min-width: 0; padding: 4px 0 8px 10px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+  .nav-dropdown-menu a { min-height: 36px; padding: 8px 10px !important; border-bottom: 0 !important; font-size: 13px !important; }
+}
+
+@media (max-width: 760px) {
+  .main-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .main-nav > a { font-size: 14px; padding: 14px 5px; }
+  .nav-dropdown { display: block; min-width: 0; }
+  .nav-dropdown-trigger { width: 100%; min-height: 48px; padding: 13px 5px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .nav-dropdown.has-current > .nav-dropdown-trigger::before { bottom: 5px; right: auto; width: 28px; }
+  .nav-dropdown-menu { position: static; min-width: 0; padding: 4px 0 9px 8px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+  .nav-dropdown-menu a { min-height: 38px; padding: 9px 10px !important; border: 0 !important; border-left: 2px solid var(--line-strong) !important; border-radius: 0 8px 8px 0; font-size: 13px !important; white-space: normal; }
+  .skill-card .stack-row .tag,
+  .detail-panel .stack-row .tag,
+  .stack-row.stackRow .tag { min-height: 30px; padding: 6px 10px; font-size: 13.5px; }
+  .detail-fact strong { font-size: 14px; }
+}
+
+@media (min-width: 1440px) {
+  .main-nav > a, .nav-dropdown-trigger { font-size: 14.5px; }
+  .skill-card .stack-row .tag,
+  .detail-panel .stack-row .tag,
+  .stack-row.stackRow .tag { font-size: 15px; }
+}

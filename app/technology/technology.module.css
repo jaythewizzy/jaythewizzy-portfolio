@@ -1,14 +1,23 @@
-/* Technology toolkit: readable skill labels without changing global tag sizing. */
+/* Technology toolkit labels intentionally override legacy 10px tags. */
 .stackRow :global(.tag) {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.55;
-  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface2);
   color: var(--text);
+  font-size: 14px !important;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
 }
 
 @media (max-width: 760px) {
   .stackRow :global(.tag) {
-    font-size: 13px;
+    min-height: 30px;
+    padding: 6px 10px;
+    font-size: 13.5px !important;
   }
 }

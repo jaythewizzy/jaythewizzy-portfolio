@@ -54,6 +54,10 @@ export default function DeveloperPlatformsPage() {
             </div>
             <Link className="button button-primary" href="/apps/luxen/">Explore LUXEN <ArrowIcon /></Link>
           </div>
+          <div className={styles.catalogueLinks} aria-label="Explore app and game catalogues">
+            <Link className="button button-quiet" href="/apps/">See all apps <ArrowIcon /></Link>
+            <Link className="button button-quiet" href="/games/">See all games <ArrowIcon /></Link>
+          </div>
           <p className={styles.publisherNote}>This page covers developer destinations associated with JaytheWizzy. Games published under other developer accounts remain linked to their respective publisher pages.</p>
         </div>
       </section>
