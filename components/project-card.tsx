@@ -17,7 +17,7 @@ export function ProjectCard({ href, name, category, status, statusTone = 'develo
       <div className="project-meta"><span className={`status status-${statusTone}`}>{status}</span><span>{category}</span></div>
       <h3>{name}</h3>
       <p>{description}</p>
-      {stack.length > 0 && <div className="tags project-tags">{stack.slice(0, 5).map((item) => <span className="tag" key={item}>{item}</span>)}</div>}
+      {stack.length > 0 && <div className="project-tags">{stack.slice(0, 5).map((item) => <span className="tag" key={item}>{item}</span>)}</div>}
       <span className="text-link">View project <ArrowIcon /></span>
     </Link>
   );

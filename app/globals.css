@@ -1285,3 +1285,152 @@ body {
   .skill-card .stack-row .tag,
   .stack-row.stackRow .tag { font-size: 16px; }
 }
+
+
+/* Project catalogue cards: consistent metadata, readable copy, and properly wrapping tags. */
+.project-grid {
+  align-items: stretch;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-grid > .project-card-link {
+  min-width: 0;
+  min-height: 392px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 22px;
+  overflow: hidden;
+}
+
+/* Status and category always occupy the same two-line area. */
+.project-card-link > .project-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+  align-content: start;
+  align-items: start;
+  gap: 7px;
+  flex: 0 0 68px;
+  min-height: 68px;
+  padding: 0;
+  margin: 0;
+}
+
+.project-card-link > .project-meta .status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  white-space: normal;
+  font-family: var(--font-manrope, Arial), Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.project-card-link > .project-meta > span:last-child {
+  display: block;
+  max-width: 100%;
+  font-family: var(--font-manrope, Arial), Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.project-grid .project-card-link > h3 {
+  display: block;
+  flex: 0 0 auto;
+  min-height: 2.7em;
+  margin: 13px 0 9px;
+  font-family: var(--font-manrope, Arial), Arial, sans-serif;
+  font-size: clamp(20px, 1.35vw, 22px);
+  font-weight: 800;
+  line-height: 1.32;
+  letter-spacing: -0.025em;
+}
+
+.project-grid .project-card-link > p {
+  flex: 0 0 auto;
+  min-height: 5.05em;
+  margin: 0 0 16px;
+  font-family: var(--font-manrope, Arial), Arial, sans-serif;
+  font-size: clamp(16px, 1.08vw, 17px);
+  font-weight: 500;
+  line-height: 1.68;
+  color: var(--muted);
+}
+
+/* The wrapper is explicitly flex so complete technology names wrap as units. */
+.project-card-link > .project-tags {
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  min-height: 72px;
+  margin: 0 0 14px;
+  padding: 0;
+  overflow: visible;
+}
+
+.project-card-link > .project-tags > .tag {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface2);
+  color: var(--text);
+  font-family: var(--font-manrope, Arial), Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.project-card-link > .text-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  margin: auto 0 0;
+  padding-top: 8px;
+  font-family: var(--font-manrope, Arial), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-grid .project-card-link > p { min-height: 5.05em; }
+}
+
+@media (max-width: 760px) {
+  .project-grid { grid-template-columns: minmax(0, 1fr); }
+  .project-grid > .project-card-link {
+    min-height: 0;
+    height: auto;
+    padding: 20px;
+  }
+  .project-card-link > .project-meta {
+    flex: 0 0 auto;
+    min-height: 0;
+    margin-bottom: 8px;
+  }
+  .project-grid .project-card-link > h3 { min-height: 0; margin: 8px 0 9px; }
+  .project-grid .project-card-link > p { min-height: 0; margin-bottom: 16px; font-size: 16px; }
+  .project-card-link > .project-tags { min-height: 0; margin-bottom: 14px; }
+  .project-card-link > .project-tags > .tag { font-size: 13px; }
+}
