@@ -29,3 +29,12 @@ npm run build
 ```
 
 Review `git status`, then stage and commit the full cleanup.
+
+
+## Current-state corrections — November 10, 2026
+
+The pending checks recorded in earlier entries have since been resolved:
+
+- Coinwell is **Live on Google Play** and remains published by GrowthOS. Its publishing and privacy resources remain with GrowthOS.
+- Telegram now uses the recovered public handle `@jaythewizzy` (`https://t.me/jaythewizzy`).
+- The `/play/` developer-platform hub is part of the current route structure.

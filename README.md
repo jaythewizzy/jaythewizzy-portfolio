@@ -36,6 +36,7 @@ The build statically exports the site to `out/`. Vercel detects Next.js from `pa
 - `/about/` — Stephen's background and experience
 - `/technology/` — software and AI engineering stack
 - `/apps/` and `/apps/[slug]/` — installable and web applications, each with its own product page
+- `/play/` — official developer platforms for Google Play and future App Store releases
 - `/studio/` — services and client work
 - `/projects/` — all software, platform and brand projects
 - `/projects/[slug]/` — an individual project detail page
@@ -51,7 +52,7 @@ The build statically exports the site to `out/`. Vercel detects Next.js from `pa
 
 ## Content editing
 
-Portfolio content is data-driven. See `CONTENT_GUIDE.md` for the exact files to edit when adding projects, games, music, books or company ventures. Official social destinations are maintained centrally in `data/site.ts`. Most use `@Jaythewizzy`; Telegram currently uses the provisional handle `@jaythewizz` until account access is restored.
+Portfolio content is data-driven. See `CONTENT_GUIDE.md` for the exact files to edit when adding projects, games, music, books or company ventures. Official social destinations are maintained centrally in `data/site.ts`. Telegram currently uses the public handle `@jaythewizzy`.
 
 ## Images
 

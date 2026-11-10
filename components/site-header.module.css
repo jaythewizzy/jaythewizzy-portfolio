@@ -13,10 +13,16 @@
 
 .mainNav > :global(a),
 .mainNav :global(.nav-dropdown-trigger) {
-  font-size: clamp(14.5px, 1.12vw, 15.5px) !important;
+  font-size: clamp(15.5px, 1.2vw, 16.5px) !important;
   font-weight: 750;
   letter-spacing: 0.01em;
   line-height: 1.25;
+  white-space: nowrap;
+}
+
+.mainNav :global(.nav-dropdown-menu a) {
+  font-size: 14.5px !important;
+  font-weight: 700;
 }
 
 .headerTools {
@@ -31,7 +37,7 @@
 
   .mainNav > :global(a),
   .mainNav :global(.nav-dropdown-trigger) {
-    font-size: 14px !important;
+    font-size: 15.5px !important;
   }
 }
 
@@ -43,7 +49,7 @@
 
   .mainNav > :global(a),
   .mainNav :global(.nav-dropdown-trigger) {
-    font-size: 14px !important;
+    font-size: 15px !important;
   }
 
   .headerTools {
