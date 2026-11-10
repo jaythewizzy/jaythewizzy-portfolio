@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowIcon, DownloadIcon, MenuIcon } from './icons';
+import { ArrowIcon, MenuIcon } from './icons';
+import styles from './site-header.module.css';
 import { ThemeToggle } from './theme-toggle';
 
 export function SiteHeader() {
@@ -59,7 +60,7 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <div className="shell header-inner">
+      <div className={`shell header-inner ${styles.headerInner}`}>
         <Link className="brand" href="/" aria-label="JaytheWizzy home" onClick={closeMenus}>
           <span className="brand-mark">JW</span>
           <span className="brand-lockup">
@@ -68,7 +69,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav ref={navRef} className={`main-nav${menuOpen ? ' is-open' : ''}`} id="main-navigation" aria-label="Main navigation">
+        <nav ref={navRef} className={`main-nav ${styles.mainNav}${menuOpen ? ' is-open' : ''}`} id="main-navigation" aria-label="Main navigation">
           <Link href="/" aria-current={isActive('/') ? 'page' : undefined} onClick={closeMenus}>Home</Link>
           <Link href="/technology" aria-current={isActive('/technology') ? 'page' : undefined} onClick={closeMenus}>Technology</Link>
 
@@ -129,8 +130,7 @@ export function SiteHeader() {
           </div>
         </nav>
 
-        <div className="header-tools">
-          <Link className="header-cv" href="/cv" aria-label="View CV">CV <DownloadIcon /></Link>
+        <div className={`header-tools ${styles.headerTools}`}>
           <ThemeToggle />
           <Link className="button button-small button-outline header-cta" href="/contact">Get in touch <ArrowIcon /></Link>
           <button

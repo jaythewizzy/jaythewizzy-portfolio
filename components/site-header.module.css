@@ -1,0 +1,52 @@
+/* Focused desktop header refinement. Mobile navigation sizing remains unchanged. */
+.headerInner {
+  gap: clamp(16px, 1.55vw, 25px);
+}
+
+.mainNav {
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(17px, 1.55vw, 25px);
+}
+
+.mainNav > :global(a),
+.mainNav :global(.nav-dropdown-trigger) {
+  font-size: clamp(14.5px, 1.12vw, 15.5px) !important;
+  font-weight: 750;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.headerTools {
+  flex: 0 0 auto;
+  gap: 14px;
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .mainNav {
+    flex: initial;
+  }
+
+  .mainNav > :global(a),
+  .mainNav :global(.nav-dropdown-trigger) {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .mainNav {
+    flex: initial;
+    gap: 0;
+  }
+
+  .mainNav > :global(a),
+  .mainNav :global(.nav-dropdown-trigger) {
+    font-size: 14px !important;
+  }
+
+  .headerTools {
+    gap: 10px;
+  }
+}
