@@ -1,10 +1,12 @@
 # LUXEN content positioning and current audit refresh
 
-Baseline: `jaythewizzy-source-20261110-0f209ea.zip` (committed checkpoint `0f209ea`, branch `main`).
+**Initial working baseline:** `jaythewizzy-source-20261110-0f209ea.zip` (`0f209ea`, branch `main`).  
+**Final committed checkpoint:** `4cb593f` on `main`.  
+**Current full-source snapshot:** `jaythewizzy-source-20261110-072936-4cb593f.zip`.
 
 ## Purpose
 
-Align the active JaytheWizzy portfolio copy with LUXEN's established positioning as a discovery platform for movies, anime and TV series. Refresh the site audit so it no longer reports the earlier commit or incorrectly says the production build is still unverified.
+Align the active JaytheWizzy portfolio copy with LUXEN's established positioning as a discovery platform for movies, anime and TV series. Refresh the site audit so it reflects the final committed source and the successful local validation results.
 
 ## Copy changes
 
@@ -16,9 +18,9 @@ Align the active JaytheWizzy portfolio copy with LUXEN's established positioning
 
 ## Documentation changes
 
-- Refreshed `SITE_AUDIT_NOTES.md` against source baseline `0f209ea`.
-- Recorded the supplied validation result: typecheck passed; Next.js 16.4.5 production build passed and generated 36/36 static pages.
-- Removed the stale statement that a production build still needed confirmation.
+- Refreshed `SITE_AUDIT_NOTES.md` to describe the final committed checkpoint `4cb593f`.
+- Updated the audit's validation provenance with the successful typecheck, Next.js 16.4.5 production build and 36/36 static-page generation reported in the local PowerShell transcript.
+- Recorded that commit `4cb593f` was pushed successfully to `origin/main`.
 - Clarified the remaining planned items: localization, the public Apple developer destination, and pre-release privacy/support destinations for future JaytheWizzy-published games.
 
 ## Deliberately unchanged
@@ -29,6 +31,13 @@ Align the active JaytheWizzy portfolio copy with LUXEN's established positioning
 - Coinwell's existing GrowthOS publisher and privacy arrangement.
 - Historical records under `docs/change-history/`.
 
-## Validation
+## Validation and commit
 
-A TypeScript/TSX syntax transpilation pass parsed 43 source files with zero syntax diagnostics. A dependency-backed `npm run typecheck` / `npm run build` could not be completed in this workspace: `npm ci` timed out because the package registry could not be resolved (`EAI_AGAIN` for `registry.npmjs.org`). The successful build and typecheck from `0f209ea` are pre-patch results, not proof that this exact uncommitted patch has already passed the full build. Run both commands after overlaying these changes into the local Git working copy.
+The user-supplied local terminal output confirms:
+
+- `npm run typecheck` passed (`tsc --noEmit`).
+- `npm run build` passed on Next.js 16.4.5, with all 36/36 static-page generation steps completed.
+- `git diff --cached --check` completed without a reported error.
+- Commit `4cb593f` (`Align LUXEN positioning and refresh site audit`) was created on `main` and pushed successfully to `origin/main`.
+
+The working change was committed as `4cb593f`; the successful build and typecheck therefore validate the exact application-copy changes included in that commit. The current documentation-only cleanup updates the handoff records to match this established checkpoint and does not alter application code.

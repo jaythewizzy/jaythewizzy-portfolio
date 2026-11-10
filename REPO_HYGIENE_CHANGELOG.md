@@ -46,3 +46,13 @@ The pending checks recorded in earlier entries have since been resolved:
 - Added a content-guide guardrail to preserve that product positioning in future edits.
 - Refreshed `SITE_AUDIT_NOTES.md` with the supplied successful typecheck/build evidence and the 36/36 static-page generation result.
 - The exact file-level scope and validation provenance are documented in `LUXEN_POSITIONING_AND_AUDIT_REFRESH.md`.
+
+## Current source checkpoint and validation — November 10, 2026
+
+- Current source baseline: commit `4cb593f` on `main`, pushed successfully to `origin/main`.
+- Commit message: `Align LUXEN positioning and refresh site audit`.
+- The supplied PowerShell output confirms `npm run typecheck` passed and `npm run build` passed on Next.js 16.4.5.
+- The production build completed all 36/36 static-page generation steps.
+- The LUXEN movies/anime/TV-series positioning update is committed; its file-level scope is recorded in `LUXEN_POSITIONING_AND_AUDIT_REFRESH.md`.
+- The current full-source snapshot is `jaythewizzy-source-20261110-072936-4cb593f.zip`.
+- `SITE_AUDIT_NOTES.md` is aligned with this checkpoint. Earlier entries in this changelog retain the historical baselines on which those prior changes were made.
