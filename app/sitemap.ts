@@ -17,7 +17,7 @@ function withTrailingSlash(path: string): string {
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '', '/about', '/technology', '/studio', '/projects', '/games', '/music', '/books',
-    '/media', '/film-tv', '/contact', '/cv', '/apps', '/investors', '/wizzy-lux-global-concepts',
+    '/media', '/film-tv', '/contact', '/cv', '/apps', '/play', '/investors', '/wizzy-lux-global-concepts',
   ];
   const detailRoutes = [
     ...projects.map((project) => `/projects/${project.slug}`),

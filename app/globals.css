@@ -515,3 +515,52 @@ body{font-size:16px;line-height:1.76}
     line-height: 1.45;
   }
 }
+
+/* The added Play destination needs a slightly earlier compact-header breakpoint. */
+@media (min-width: 761px) and (max-width: 1180px) {
+  .header-inner { position: relative; min-height: 76px; }
+  .main-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75px;
+    display: none;
+    padding: 14px 22px 20px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 20px;
+    z-index: 60;
+  }
+  .main-nav.is-open { display: grid; }
+  .main-nav a { padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .main-nav a[aria-current=page]:after { bottom: 5px; right: auto; width: 28px; }
+  .header-cv, .header-cta { display: none !important; }
+  .menu-toggle { display: grid; }
+  .header-tools { gap: 12px; }
+  .mobile-nav-actions {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding-top: 16px;
+  }
+  .mobile-nav-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 46px;
+    padding: 0 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .mobile-nav-actions .mobile-cv-link { display: flex; background: var(--surface); color: var(--text); }
+  .mobile-nav-actions .mobile-contact-link { background: var(--gold); border-color: var(--gold); color: #19150e; }
+  .mobile-nav-actions a:after { display: none; }
+  .mobile-nav-actions a svg { width: 14px; height: 14px; }
+}

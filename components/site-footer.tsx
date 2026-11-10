@@ -19,7 +19,7 @@ export function SiteFooter() {
           <Link className="footer-contact" href="/contact">Start a conversation <ArrowIcon /></Link>
         </div>
         <div className="footer-links">
-          <div><span>ENGINEERING</span><Link href="/technology">Technology & AI</Link><Link href="/apps">Apps</Link><Link href="/projects">Selected projects</Link><Link href="/cv">CV / Résumé</Link></div>
+          <div><span>ENGINEERING</span><Link href="/technology">Technology & AI</Link><Link href="/apps">Apps</Link><Link href="/play">Play · Developer platforms</Link><Link href="/projects">Selected projects</Link><Link href="/cv">CV / Résumé</Link></div>
           <div><span>CREATIVE WORK</span><Link href="/games">Games</Link><Link href="/media">Music, books & screen</Link><Link href="/studio">Studio</Link></div>
           <div><span>THE ECOSYSTEM</span><Link href="/wizzy-lux-global-concepts">WizzyLux Global Concepts</Link><Link href="/investors">Investors & strategic partners</Link><Link href="/about">About Stephen</Link><Link href="/contact">Contact</Link></div>
         </div>

@@ -7,6 +7,10 @@ export const site = {
   url: 'https://jaythewizzy.com',
   email: 'jaythewizzy@gmail.com',
   cvPath: '/stephen-omojola-cv.pdf',
+  developerProfiles: {
+    googlePlay: 'https://play.google.com/store/apps/dev?id=6171921839772798418',
+    appStore: null,
+  },
   whatsapp: [
     { label: 'Belarus line', display: '+375 25 742 25 96', href: 'https://wa.me/375257422596' },
     { label: 'Nigeria line', display: '+234 813 084 7252', href: 'https://wa.me/2348130847252' },
@@ -20,6 +24,5 @@ export const site = {
     { name: 'TikTok', href: 'https://tiktok.com/@jaythewizzy', icon: 'tiktok' },
     { name: 'Spotify', href: 'https://open.spotify.com/artist/5AciBMXf9Yz0kDpZiFZGdW?si=XdsNWXp3Rx-AatXjy6xZbA', icon: 'spotify' },
     { name: 'Telegram', href: 'https://t.me/jaythewizzy', icon: 'telegram', handle: '@jaythewizzy' },
-    { name: 'Google Play Developer Profile', href: 'https://play.google.com/store/apps/dev?id=6171921839772798418', icon: 'google-play' },
   ],
 } as const;

@@ -17,6 +17,7 @@ function cleanProfileUrl(href: string): string {
 
 const personProfileUrls = Array.from(new Set([
   ...site.socials.map(({ href }) => cleanProfileUrl(href)),
+  cleanProfileUrl(site.developerProfiles.googlePlay),
   ...musicArtistPlatforms.primary.map(({ href }) => cleanProfileUrl(href)),
   ...musicArtistPlatforms.more.map(({ href }) => cleanProfileUrl(href)),
 ]));
