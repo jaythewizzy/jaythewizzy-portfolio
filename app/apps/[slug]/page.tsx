@@ -41,6 +41,7 @@ export default async function AppDetailPage({ params }: Props) {
             <ul className="feature-list">{app.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
             <div className="hero-actions">
               {app.websiteUrl && <a className="button button-primary" href={app.websiteUrl} target="_blank" rel="noreferrer noopener">Visit {app.name} <ArrowIcon /></a>}
+              {app.googlePlayUrl && <a className="button button-quiet" href={app.googlePlayUrl} target="_blank" rel="noreferrer noopener">Get {app.name} on Google Play <ArrowIcon /></a>}
               {app.engineeringCaseStudy && <Link className="button button-quiet" href={app.engineeringCaseStudy}>Engineering case study <ArrowIcon /></Link>}
             </div>
           </article>

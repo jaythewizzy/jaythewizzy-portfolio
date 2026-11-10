@@ -9,6 +9,7 @@ export type AppProduct = {
   stack: string[];
   highlights: string[];
   websiteUrl?: string;
+  googlePlayUrl?: string;
   engineeringCaseStudy?: string;
 };
 
@@ -39,6 +40,7 @@ export const apps: AppProduct[] = [
       'Push notifications, consent-aware advertising, analytics and SEO',
     ],
     websiteUrl: 'https://luxen.watch',
+    googlePlayUrl: 'https://play.google.com/store/apps/details?id=watch.luxen.app',
     engineeringCaseStudy: '/projects/luxen',
   },
 ];

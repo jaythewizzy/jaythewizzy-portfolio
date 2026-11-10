@@ -20,5 +20,6 @@ export const site = {
     { name: 'TikTok', href: 'https://tiktok.com/@jaythewizzy', icon: 'tiktok' },
     { name: 'Spotify', href: 'https://open.spotify.com/artist/5AciBMXf9Yz0kDpZiFZGdW?si=XdsNWXp3Rx-AatXjy6xZbA', icon: 'spotify' },
     { name: 'Telegram', href: 'https://t.me/jaythewizzy', icon: 'telegram', handle: '@jaythewizzy' },
+    { name: 'Google Play Developer Profile', href: 'https://play.google.com/store/apps/dev?id=6171921839772798418', icon: 'google-play' },
   ],
 } as const;

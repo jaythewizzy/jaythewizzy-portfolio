@@ -14,6 +14,7 @@ export const metadata = createPageMetadata({
 
 export default function ContactPage() {
   const telegramProfile = site.socials.find((social) => social.name === 'Telegram');
+  const googlePlayDeveloperProfile = site.socials.find((social) => social.name === 'Google Play Developer Profile');
 
   return (
     <>
@@ -26,6 +27,7 @@ export default function ContactPage() {
           <div className="contact-detail"><span className="contact-icon"><MailIcon /></span><div><small>EMAIL</small><b>{site.email}</b></div><a href={`mailto:${site.email}?subject=JaytheWizzy%20-%20Professional%20Enquiry`}>Write an email <ArrowIcon /></a></div>
           <div className="contact-detail"><span className="contact-icon">in</span><div><small>LINKEDIN</small><b>linkedin.com/in/jaythewizzy</b></div><a href="https://www.linkedin.com/in/jaythewizzy/" target="_blank" rel="noreferrer noopener">Connect on LinkedIn <ArrowIcon /></a></div>
           <div className="contact-detail"><span className="contact-icon">GH</span><div><small>GITHUB</small><b>github.com/jaythewizzy</b></div><a href="https://github.com/jaythewizzy" target="_blank" rel="noreferrer noopener">View profile <ArrowIcon /></a></div>
+          {googlePlayDeveloperProfile && <div className="contact-detail"><span className="contact-icon">GP</span><div><small>GOOGLE PLAY DEVELOPER</small><b>JaytheWizzy on Google Play</b></div><a href={googlePlayDeveloperProfile.href} target="_blank" rel="noreferrer noopener">View developer profile <ArrowIcon /></a></div>}
           {telegramProfile && <div className="contact-detail"><span className="contact-icon">TG</span><div><small>TELEGRAM</small><b>{'handle' in telegramProfile ? telegramProfile.handle : 'Telegram profile'}</b></div><a href={telegramProfile.href} target="_blank" rel="noreferrer noopener">Message on Telegram <ArrowIcon /></a></div>}
           <div className="contact-detail"><span className="contact-icon">CV</span><div><small>CV / RÉSUMÉ</small><b>Software & AI Engineering profile</b></div><Link href="/cv">View CV <ArrowIcon /></Link></div>
           <div className="social-label">FOLLOW, CONNECT &amp; REACH OUT · @JAYTHEWIZZY</div><SocialLinks />
