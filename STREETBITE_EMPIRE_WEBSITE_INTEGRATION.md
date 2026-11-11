@@ -1,8 +1,8 @@
 # StreetBite Empire — JaytheWizzy.com integration handoff
 
-**Date:** 10 November 2026  
-**Website source baseline:** `jaythewizzy-source-20261110-073711-acb4a4a.zip`  
-**Publisher:** JaytheWizzy Games  
+**Date:** 10 November 2026
+**Website source baseline:** `jaythewizzy-source-20261110-073711-acb4a4a.zip`
+**Publisher:** JaytheWizzy Games
 **Game title:** StreetBite Empire (working title; trademark/title clearance remains outstanding)
 
 ## Implemented in this source
