@@ -41,6 +41,7 @@ The build statically exports the site to `out/`. Vercel detects Next.js from `pa
 - `/projects/` — all software, platform and brand projects
 - `/projects/[slug]/` — an individual project detail page
 - `/games/` and `/games/[slug]/` — games and individual game pages
+- `/games/streetbite-empire/privacy/` and `/games/streetbite-empire/support/` — StreetBite Empire privacy and player-support pages
 - `/music/` and `/music/[slug]/` — music catalogue and individual releases
 - `/books/` and `/books/[slug]/` — books and individual works; The Second Life of Julian Vale is in progress, with Book One titled Play the Game and a planned four-book arc
 - `/media/` — media hub

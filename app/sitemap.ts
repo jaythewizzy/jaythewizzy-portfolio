@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const detailRoutes = [
     ...projects.map((project) => `/projects/${project.slug}`),
     ...games.map((game) => `/games/${game.slug}`),
+    '/games/streetbite-empire/privacy',
+    '/games/streetbite-empire/support',
     ...books.map((book) => `/books/${book.slug}`),
     ...musicReleases.map((release) => `/music/${release.slug}`),
     ...apps.map((app) => `/apps/${app.slug}`),
