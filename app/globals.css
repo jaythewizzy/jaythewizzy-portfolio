@@ -1437,19 +1437,25 @@ body {
 
 
 /* JaytheWizzy Games — featured title and product/legal pages. */
-.game-feature-section { padding-top: 12px; }
+.game-feature-section { padding-top: 12px; padding-bottom: 24px; }
 .game-feature-panel { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr); align-items: stretch; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 26px; background: var(--surface); box-shadow: var(--shadow); }
-.game-feature-art { position: relative; min-height: 300px; overflow: hidden; background: var(--surface2); }
-.game-feature-art img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; }
+.game-feature-art { position: relative; aspect-ratio: 16 / 10; min-height: 0; overflow: hidden; background: radial-gradient(ellipse at 50% 45%, rgba(214,173,103,.13), transparent 68%), var(--surface2); }
+.game-feature-art img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center; }
 .game-feature-label { position: absolute; left: 18px; bottom: 18px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(8,9,11,.78); color: #f4f1ea; font-size: 10px; font-weight: 800; letter-spacing: .13em; }
 .game-feature-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(26px, 4vw, 48px); }
 .game-feature-copy h2 { margin: 12px 0 4px; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -.045em; }
 .game-feature-tagline { margin: 0 0 14px !important; color: var(--gold) !important; font-weight: 800 !important; }
 .game-feature-copy > p:last-of-type { color: var(--muted); }
+.game-more-section { padding-top: 26px; }
+.game-more-section .section-heading { margin-bottom: 28px; }
 .game-detail-art-section { padding-top: 4px; padding-bottom: 0; }
 .game-detail-art { width: 100%; max-height: 430px; border: 1px solid var(--line-strong); border-radius: 22px; object-fit: cover; box-shadow: var(--shadow); }
 .game-detail-links { display: flex; gap: 24px; flex-wrap: wrap; padding: 14px 2px 0; }
 .legal-document { max-width: 900px; }
+.game-legal-section { padding-top: 34px; }
+.game-back-link { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 22px; color: var(--gold2); font-size: 12px; font-weight: 800; transition: color .2s, transform .2s; }
+.game-back-link::before { content: "←"; font-size: 17px; line-height: 1; }
+.game-back-link:hover { color: var(--text); transform: translateX(-2px); }
 .legal-document > p, .legal-document li { color: var(--muted); font-size: 16px; line-height: 1.85; }
 .legal-document a { color: var(--gold2); text-decoration: underline; text-underline-offset: 3px; }
 .legal-document a:hover { color: var(--text); }
@@ -1461,6 +1467,8 @@ body {
 .legal-contact-panel { margin-top: 38px; padding: 24px; border: 1px solid var(--line-strong); border-radius: 18px; background: var(--surface2); }
 .legal-contact-panel h2 { font-size: 22px; }
 .legal-footnote { margin-top: 22px; font-size: 13px !important; }
+.game-support-section { padding-top: 34px; }
+.support-shell > .game-back-link { margin-bottom: 22px; }
 .support-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); gap: 22px; align-items: start; }
 .support-main-panel { padding: clamp(24px, 4vw, 42px); }
 .support-main-panel h2 { margin: 10px 0; font-size: clamp(30px, 4vw, 42px); }
@@ -1470,7 +1478,12 @@ body {
 .support-email a { color: var(--gold2); }
 @media (max-width: 760px) {
   .game-feature-panel, .support-layout { grid-template-columns: minmax(0, 1fr); }
-  .game-feature-art, .game-feature-art img { min-height: 190px; max-height: 260px; }
+  .game-feature-art { aspect-ratio: 16 / 10; min-height: 0; max-height: none; }
+  .game-feature-art img { min-height: 0; max-height: none; }
+  .game-feature-section { padding-bottom: 18px; }
+  .game-more-section { padding-top: 20px; }
+  .game-more-section .section-heading { margin-bottom: 22px; }
+  .game-legal-section, .game-support-section { padding-top: 26px; }
   .game-feature-copy { padding: 24px 20px; }
   .game-detail-art { border-radius: 16px; }
   .legal-document > p, .legal-document li { font-size: 15px; }

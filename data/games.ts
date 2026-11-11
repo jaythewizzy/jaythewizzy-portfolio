@@ -11,6 +11,7 @@ export type Game = {
   publisher?: string;
   tagline?: string;
   featureImage?: string;
+  featureCardImage?: string;
   privacyPath?: string;
   supportPath?: string;
 };
@@ -40,6 +41,7 @@ export const games: Game[] = [
     publisher: 'JaytheWizzy Games',
     tagline: 'Build it. Serve it. Own the streets.',
     featureImage: '/games/streetbite-empire/feature-graphic.png',
+    featureCardImage: '/games/streetbite-empire/feature-art.webp',
     privacyPath: '/games/streetbite-empire/privacy/',
     supportPath: '/games/streetbite-empire/support/',
   },

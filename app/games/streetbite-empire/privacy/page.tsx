@@ -13,7 +13,8 @@ export default function StreetBitePrivacyPage() {
   return (
     <>
       <PageIntro eyebrow="JAYTHEWIZZY GAMES · STREETBITE EMPIRE" title={<>Privacy <em>policy.</em></>} description="How StreetBite Empire handles local game data, advertising, consent and purchases." breadcrumb="StreetBite Empire" />
-      <section className="section"><div className="shell legal-document">
+      <section className="section game-legal-section"><div className="shell legal-document">
+        <Link className="game-back-link" href="/games/streetbite-empire/">Back to StreetBite Empire</Link>
         <p className="legal-updated">Last updated: 10 November 2026</p>
         <p>This policy applies to the mobile game <strong>StreetBite Empire</strong>, published by JaytheWizzy Games. It also explains how to contact us about privacy. The game is in development; the policy and the app-store disclosures will be checked against the exact release build and enabled services before public release.</p>
 
