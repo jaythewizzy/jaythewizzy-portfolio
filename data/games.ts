@@ -9,9 +9,40 @@ export type Game = {
   stack: string[];
   highlights: string[];
   publisher?: string;
+  tagline?: string;
+  featureImage?: string;
+  privacyPath?: string;
+  supportPath?: string;
 };
 
 export const games: Game[] = [
+  {
+    slug: 'streetbite-empire',
+    name: 'StreetBite Empire',
+    category: 'Idle food-business simulator',
+    status: 'In development',
+    statusTone: 'development',
+    summary: 'Build a street-food business, upgrade eight food stations, hire managers and expand across five cities.',
+    description: [
+      'StreetBite Empire is a single-player idle business simulator about turning a small food stand into a growing street-food operation. Players upgrade food stations, improve production, hire managers and build income that continues while they are away.',
+      'The current development baseline includes eight upgradeable food stations, manager automation, offline earnings, five city destinations, prestige progression, achievements, daily gem rewards and a repeatable opt-in Sponsor Cash video-reward loop. Rewards are virtual in-game currency and have no cash value.',
+      'StreetBite Empire is being developed for Android first, with the Expo project retaining an iOS configuration for a later release. It is not yet available on Google Play or the Apple App Store.',
+    ],
+    stack: ['Expo', 'React Native', 'TypeScript', 'Local-first saves', 'Google Mobile Ads'],
+    highlights: [
+      'Eight upgradeable food stations, from lemonade and hot dogs to burgers, sushi and desserts',
+      'Hire managers to automate stations and continue earning while away',
+      'Five city destinations with permanent prestige progression',
+      'Repeatable, optional Sponsor Cash rewarded-video offers',
+      'Achievements, daily rewards, boosts and a game-specific shop',
+      'Offline-first core play with advertising and purchases used for optional online services',
+    ],
+    publisher: 'JaytheWizzy Games',
+    tagline: 'Build it. Serve it. Own the streets.',
+    featureImage: '/games/streetbite-empire/feature-graphic.png',
+    privacyPath: '/games/streetbite-empire/privacy/',
+    supportPath: '/games/streetbite-empire/support/',
+  },
   {
     slug: 'coinwell',
     name: 'Coinwell',
