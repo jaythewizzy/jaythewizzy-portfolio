@@ -14,6 +14,7 @@ export type Game = {
   featureCardImage?: string;
   privacyPath?: string;
   supportPath?: string;
+  termsPath?: string;
 };
 
 export const games: Game[] = [
@@ -44,6 +45,7 @@ export const games: Game[] = [
     featureCardImage: '/games/streetbite-empire/feature-art.webp',
     privacyPath: '/games/streetbite-empire/privacy/',
     supportPath: '/games/streetbite-empire/support/',
+    termsPath: '/games/streetbite-empire/terms/',
   },
   {
     slug: 'coinwell',

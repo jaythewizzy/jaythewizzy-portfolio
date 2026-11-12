@@ -38,7 +38,7 @@ export default function StreetBitePrivacyPage() {
 
         <section><h2>10. Changes to this policy</h2><p>This policy may be updated when the game, its SDKs, features or applicable requirements change. The date at the top of this page will be updated when a material change is made.</p></section>
 
-        <div className="legal-contact-panel"><h2>Questions about privacy?</h2><p>Contact JaytheWizzy Games at <a href="mailto:jaythewizzy@gmail.com">jaythewizzy@gmail.com</a>, or visit the <Link href="/games/streetbite-empire/support/">StreetBite Empire support page</Link>.</p></div>
+        <div className="legal-contact-panel"><h2>Questions about privacy?</h2><p>Contact JaytheWizzy Games at <a href="mailto:jaythewizzy@gmail.com">jaythewizzy@gmail.com</a>, or visit the <Link href="/games/streetbite-empire/support/">StreetBite Empire support page</Link>.</p><p><Link href="/games/streetbite-empire/terms/">Read the Terms of Service</Link></p></div>
         <p className="legal-footnote">This page describes the current planned release architecture. The publisher will verify it against the final SDK configuration, app-store declarations, audience settings and release build before the game is submitted.</p>
       </div></section>
     </>

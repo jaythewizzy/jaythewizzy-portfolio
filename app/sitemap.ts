@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...projects.map((project) => `/projects/${project.slug}`),
     ...games.map((game) => `/games/${game.slug}`),
     '/games/streetbite-empire/privacy',
+    '/games/streetbite-empire/terms',
     '/games/streetbite-empire/support',
     ...books.map((book) => `/books/${book.slug}`),
     ...musicReleases.map((release) => `/music/${release.slug}`),
